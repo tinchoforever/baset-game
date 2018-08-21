@@ -1,9 +1,10 @@
 * {
     font-family: 'Poppins', Arial, sans-serif;
-    color: white;
+  
 }
 html{
-    background: rgb(251, 52, 73);
+    background: white;
+    color:black;
 }
 .vh80 {
     height: 70vh;
@@ -15,7 +16,7 @@ a{
 .wrapper {
     max-width: 1280px;
     margin: 0 auto;
-    background: rgb(251, 52, 73);
+    background: #fbfdd5;
     height: 100vh;
 }
 
@@ -131,6 +132,7 @@ a.btn {
     text-transform: uppercase;
     font-weight: 700;
     background-color:#683064;
+    color:white;
     margin: 4px;
     width: 100%;
 }
