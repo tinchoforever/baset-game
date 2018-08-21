@@ -1,0 +1,44 @@
+<div class="container">
+           
+        <div class=" row second-row answer">
+              <div class="col-xs-12">
+        
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <h2><span ng-show="lastAnswer.result"><img class="icon" src="images/iconos/carita-pan.svg"> Correcto! </span>
+              <span ng-hide="lastAnswer.result"><img  class="icon" src="images/iconos/ko.svg">Incorrecto.</span> Este argumento es 
+<span class="btn no-click wow slideInRight" data-wow-delay="2s" href=""><img ng-src="images/iconos/{{currentCheck['Resultado chequeo'].toLowerCase().replace(' ','')}}.svg"/>{{currentCheck['Resultado chequeo']}} </span>
+              </h2>
+               <h3> <strong> {{currentCheck['Expositor/a']}}</strong> dijo que: </h3>
+              <p> "{{currentCheck.Dato}}" </p>
+             
+              <strong class="btn no-click" ng-show="currentCheck.Comentarios != ''"> ¿Por qué? </strong>
+              <p  class="wow slideInRight" data-wow-delay="2.2s" ng-show="currentCheck.Comentarios != ''"> {{currentCheck.Comentarios}}</p>
+            <div class="small">
+                  <strong class="btn no-click wow slideInRight" data-wow-delay="4s"  ng-show="currentCheck['Fuente 1'] != ''"> Fuentes </strong>
+                  <ul class="wow slideInRight" data-wow-delay="4.3s">
+                      <li ng-show="currentCheck['Fuente 1'] != ''" ><a target="_blank" ng-href="{{currentCheck['Fuente 1']}}"> {{currentCheck['Fuente 1']}} </a> </li>
+                      <li ng-show="currentCheck['Fuente 2'] != ''"><a  target="_blank" ng-href="{{currentCheck['Fuente 2']}}"> {{currentCheck['Fuente 2']}} </a> </li>
+                      <li ng-show="currentCheck['Fuente 3'] != ''" ><a target="_blank" ng-href="{{currentCheck['Fuente 3']}}"> {{currentCheck['Fuente 3']}} </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+       <div class="row">
+
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                    <h5> <strong> Tu puntaje es {{currentGame.points}}! </strong> </h5>
+                    <h5> <a class="btn" ng-hide="gameFinish" href="" ng-click="nextQuestion()"> Segui > Vas {{currentGame.questions.length - currentGame.remaing}} de {{currentGame.questions.length}} </a></h5>
+                      <h5> <a class="btn" ng-show="gameFinish" href="" ng-click="finishGame()"> FINALIZASTE. CONOCÉ TUS RESULTADOS.!</a></h5>
+            </div>
+            <div class="col-md-2"></div>
+            
+        </div>
+          
+    </div>
+    </div>          
+</div>
+
+
