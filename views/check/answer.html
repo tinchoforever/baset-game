@@ -6,18 +6,18 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-              <h2><span ng-show="lastAnswer.result"><img class="icon" src="images/iconos/carita-pan.svg"> Correcto! </span>
-              <span ng-hide="lastAnswer.result"><img  class="icon" src="images/iconos/ko.svg">Incorrecto.</span>
+              <h2><span ng-show="lastAnswer.result"> Correcto! </span>
+              <span ng-hide="lastAnswer.result">Incorrecto.</span>  </h2>
+              <h2>
+                {{currentCheck['TITULO_PROYECTO']}} ({{currentCheck['PERIODO']}}) se filmó el {{currentCheck.FECHA_RODAJE}} en
+<span class="btn no-click wow slideInRight" data-wow-delay="2s" href="">{{currentCheck.COMUNA}} - {{currentCheck.BARRIO}} </span>
               </h2>
-               <h3> <strong> El Marginal </strong> se filmó en </h3>
-              <p> Palermo, Villa Fiorito, Barrio 31</p>
-             
-              <strong class="btn no-click" ng-show="currentCheck.Comentarios != ''"> ¿Por qué? </strong>
-              
-              <p  class="wow slideInRight" data-wow-delay="2.2s" ng-show="currentCheck.Comentarios != ''"> </p>
-            
+              <h3> {{currentCheck.DIRECCION}}</h3>
+               <img src="https://maps.googleapis.com/maps/api/staticmap?center={{currentCheck.lat}},{{currentCheck.lon}}&zoom=14&size=300x300&markers=color:red%7Clabel:C%7C{{currentCheck.lat}},{{currentCheck.lon}}">
+
+      <img src="https://maps.googleapis.com/maps/api/streetview?size=300x300&location={{currentCheck.lat}},{{currentCheck.lon}}&sensor=false&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY">
+            </div>
         </div>
-      </div>
        <div class="row">
 
             <div class="col-md-2"></div>
@@ -33,5 +33,4 @@
     </div>
     </div>          
 </div>
-
 

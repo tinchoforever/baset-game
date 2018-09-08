@@ -2,7 +2,7 @@
 
 angular.module('initApp')
   .controller('mainController', function ($scope, $rootScope, $location) {
-    var url = 'data.csv';
+    var url = 'data/baset.csv';
 
     $rootScope.currentGame = {
       points:0,
@@ -28,7 +28,13 @@ angular.module('initApp')
         questions: shuffle($rootScope.readyToCheck).slice(0,5)
       }
       $rootScope.currentCheck = $rootScope.currentGame.questions[$rootScope.currentGame.remaing-1];
-    
+      var filteredAnswers = $rootScope.barrios.filter(function(d){
+        return d != $rootScope.currentCheck.BARRIO.toLowerCase();
+      });
+      var randomAnswers = getRandom(filteredAnswers,3);
+      randomAnswers.push($rootScope.currentCheck.BARRIO.toLowerCase());
+      
+      $rootScope.possibleAnswers = shuffle(randomAnswers);
       $rootScope.lastAnswer = {
         result : false,
       }
@@ -41,11 +47,19 @@ angular.module('initApp')
       $rootScope.onAnswer = false;
       $rootScope.showResume = false;
       $rootScope.currentCheck = $rootScope.currentGame.questions[$rootScope.currentGame.remaing-1];
+      
+      var filteredAnswers = $rootScope.barrios.filter(function(d){
+        return d != $rootScope.currentCheck.BARRIO.toLowerCase();
+      });
+      var randomAnswers = getRandom(filteredAnswers,3);
+      randomAnswers.push($rootScope.currentCheck.BARRIO.toLowerCase());
+      
+      $rootScope.possibleAnswers = shuffle(randomAnswers);
       $location.path('pregunta');
     }
 
     $rootScope.responder = function(c){
-      var res = $rootScope.currentCheck['Resultado chequeo'];
+      var res = $rootScope.currentCheck.BARRIO;
 
       $rootScope.currentCheck.tuRespuesta = c;
       $rootScope.lastAnswer.answer = c;
@@ -63,17 +77,45 @@ angular.module('initApp')
       $location.path('respuesta');
 
     }
-  	d3.csv(url, function(data){
+
+    var invalid = []
+    invalid.push("Largometraje Con I.N.C.A.A.");
+    invalid.push("Cine Publicitario");
+
+    invalid.push("Estudiantes"); 
+    invalid.push("Video Clip");
+    invalid.push("Fotografia");
+    invalid.push("Institucionales");
+    invalid.push("Cortometraje");
+    invalid.push("Documental");
+    invalid.push("Largometraje Nacional");
+
+    var valid = [];
+    // valid.push("Programa Televisivo");
+    // valid.push("Largometraje Nacional");
+    valid.push("Largometraje");
+    valid.push("Tv Ficcion");
+    
+  	
+
+    d3.csv(url, function(data){
       $rootScope.$apply(function(){
         $rootScope.checks = data;
         $rootScope.readyToCheck = [];
         data.map(function(d){
-          if (d['Resultado chequeo'] != ''){
-            $rootScope.readyToCheck.push(d);
-          }
+            valid.map(function(m){
+              if (d['TIPO_PRODUCCION'] == m)  {
+                $rootScope.readyToCheck.push(d);    
+              }
+            });
         });
-        
-       
+        $rootScope.barrios = d3.map($rootScope.readyToCheck, function(d){return d.BARRIO.toLowerCase();}).keys();
+        $rootScope.comunas = d3.map($rootScope.readyToCheck, function(d){return d.COMUNA.toLowerCase();}).keys();
+        $rootScope.producciones = d3.map($rootScope.readyToCheck, function(d){return d.TITULO_PROYECTO;}).keys();
+
+        console.log($rootScope.barrios);
+        console.log($rootScope.comunas);
+        console.log($rootScope.producciones);
       });
     });
 
