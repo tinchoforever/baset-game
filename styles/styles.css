@@ -1,14 +1,39 @@
 
-html{
+html,body{
     color:black;
+    background: repeating-linear-gradient( -45deg, #ffec0b,  #ffff34 10px );
    
 }
+.head{
+    font-size: 18px;
+    border-color: transparent;
+    white-space: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: #E91E63;
+    color: white;
+    margin: 4px;
+    
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    background-image: none;
+    border: 6px solid white;
+    border-radius: 12px;
+}
+
 h3{
     font-family: 'OpenSans';
 }
-.vh80 {
-    height: 70vh;
-}
+
 a{
     color:black;
 }
@@ -16,8 +41,7 @@ a{
 .wrapper {
     max-width: 1280px;
     margin: 0 auto;
-    background: repeating-linear-gradient( -45deg, #ffec0b,  #ffff34 10px );
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 
@@ -62,9 +86,12 @@ a{
     text-align: center;
 }
 .btn.share {
-    border-radius: 27px;
-    width: 42px;
+    border-radius: 20px;
+    width: 36px;
     text-align: center;
+    margin: 0;
+    padding: 5px;
+    padding-top:6px;
 }
 .has-margin-top {
     margin-top: 3em;
@@ -145,6 +172,9 @@ a.btn {
     color:white;
     margin: 4px;
     width: 100%;
+}
+.btn-50{
+    width: 75%;
 }
 .btn img, img.icon{
     width: 50px;
@@ -353,6 +383,9 @@ footer p {
 }
 
 @media (min-width: 768px) {
+    .btn-50{
+        width: 50%;
+    }
     h4{
         font-size: 1.6em;
     }
