@@ -4,11 +4,15 @@
                 <div class="col-md-12" >
                 	<p> #historiascondatos </p>
                     <h2> Somos una ciudad que se filma. </h2>
-                    <h5 class="btn high no-click wow bounceInUp"> ¿Podrás adivinar si tu barrio es de película ?</h5>
-                    <h2 class="wow bounceInUp"> <a href="" ng-click="startGame()" > Empezá  </h2>
+                     <h5 class="btn high no-click wow bounceInUp"> ¿Podrás adivinar si tu barrio es de película ?</h5>
+                   
+                    <h3 ng-repeat="s in stats">
+                		{{s.number}} {{s.label}}
+                	</h3>
+                    <h2 class="wow bounceInUp"> <a href="" ng-click="startGame()" > Empezá  </a></h2>
                 </div>
-
-            </div>
+             </div>
+              
                 
 </div>
 <!-- Large modal -->
