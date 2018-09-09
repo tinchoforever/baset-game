@@ -152,34 +152,38 @@ angular.module('initApp')
         $rootScope.stats =[];
         $rootScope.stats.push({
           number: $rootScope.netoPeriodo.length,
+          icon: 'calendar-alt',
           label: 'Años'
         });
         $rootScope.stats.push({
           number: $rootScope.netofechas.length,
+          icon: 'video',
           label: 'Dias de Filmacion'
         });
         $rootScope.stats.push({
+          number: $rootScope.netoVideoClips.length,
+          icon: 'music',
+          label: 'Video Clips'
+        });
+        $rootScope.stats.push({
           number: $rootScope.netoLocaciones.length,
+          icon: 'map-marker-alt',
           label: 'Locaciones'
         });
         $rootScope.stats.push({
           number: $rootScope.netoMovies.length,
+          icon: 'film',
           label: 'Películas'
         });
         $rootScope.stats.push({
           number: $rootScope.producciones.length,
+          icon:'tv',
           label: 'Programas de TV'
         }); 
         
-        $rootScope.stats.push({
-          number: $rootScope.videoClips.length,
-          label: 'Video Clips'
-        });
         
         
-        console.log($rootScope.barrios);
-        console.log($rootScope.comunas);
-        console.log($rootScope.producciones);
+        
       });
     });
 

@@ -1,22 +1,22 @@
-* {
-    font-family: 'Poppins', Arial, sans-serif;
-  
-}
+
 html{
-    background: white;
     color:black;
+   
+}
+h3{
+    font-family: 'OpenSans';
 }
 .vh80 {
     height: 70vh;
 }
 a{
-    color:white;
+    color:black;
 }
 
 .wrapper {
     max-width: 1280px;
     margin: 0 auto;
-    background: #fbfdd5;
+    background: repeating-linear-gradient( -45deg, #ffec0b,  #ffff34 10px );
     height: 100vh;
 }
 
@@ -85,14 +85,15 @@ a.btn.no-click:hover{
 strong.btn.no-click:hover{
     color:white;
 }
+h4 img{height: 350px;  }
 .btn p{
     margin: 0;
-    /* display: table-cell; */
     vertical-align: middle;
     text-align: center;
     width: 100%;
     margin: 0;
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 h2 small, h6 small, h4 small, h5 small{
     font-size: 12px;  
@@ -121,17 +122,26 @@ h4{
 
 a{
     text-decoration: underline;
+    color: #E91E63;
+}
+a:visited{
+    text-decoration: underline;
+    color: #E91E63;
+}
+h5 a.btn{
+    color:white;
 }
 a.btn {
     text-decoration: none;
 }
+
 .btn{
     font-size: 18px;
     border-color: transparent;
     white-space: normal;
     text-transform: uppercase;
     font-weight: 700;
-    background-color:#683064;
+    background-color: #E91E63;
     color:white;
     margin: 4px;
     width: 100%;

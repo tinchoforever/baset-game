@@ -2,14 +2,20 @@
             <div class="row first-row">
                 
                 <div class="col-md-12" >
-                	<p> #historiascondatos </p>
-                    <h2> Somos una ciudad que se filma. </h2>
-                     <h5 class="btn high no-click wow bounceInUp"> ¿Podrás adivinar si tu barrio es de película ?</h5>
-                   
+                	<div class="head btn">
+                		<p> #historiascondatos </p>
+                    	<h2> Somos una ciudad que se filma. </h2>
+                   	</div>
                     <h3 ng-repeat="s in stats">
-                		{{s.number}} {{s.label}}
+                	 <i class="fas fa-{{s.icon}}"></i>	{{s.number}} {{s.label}}
                 	</h3>
-                    <h2 class="wow bounceInUp"> <a href="" ng-click="startGame()" > Empezá  </a></h2>
+                	<h2 class="wow bounceInUp">¿Podrás adivinar si tu barrio es de película ? </h2>
+                	  <h5 class="btn high no-click wow bounceInUp"
+                	  	ng-click="startGame()">
+                	  Empezá
+                	</h5>
+                   
+                    
                 </div>
              </div>
               
