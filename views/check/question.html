@@ -5,20 +5,20 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-12">
                    
-                    <h3> <strong>
+                    <h2> <strong>
                     <a ng-href='https://www.imdb.com/search/title?title="{{currentCheck.TITULO_PROYECTO}}"' target="_blank">{{currentCheck['TITULO_PROYECTO']}}</a>({{currentCheck['PERIODO']}}) </strong> 
-                       </h3>
-                       <h5>
+                       </h2>
+                       <h3>
                         {{currentCheck['TIPO_PRODUCCION']}}   </
-                       </h5>
-                      <h4>
-      <img src="https://maps.googleapis.com/maps/api/streetview?size=350x350&location={{currentCheck.lat}},{{currentCheck.lon}}&sensor=false&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY">
-                    <h4 class="wow slideInRight"> ¿Donde está filmada esta escena?</h4>
+                       </h3>
+                     <h4>
+      <img src="https://maps.googleapis.com/maps/api/streetview?size=350x350&location={{currentCheck.lat}},{{currentCheck.lon}}&sensor=false&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY"></h4>
+                    <h4 class="wow fadeIn"> ¿Donde está filmada esta escena?</h4>
                 <div class="row">
-                   <div class="col-md-12  wow slideInRight" data-wow-delay="3s" >
+                   <div class="col-md-12  wow fadeIn" data-wow-delay="3s" >
                     <div class="row">
                       <div class="col-xs-12 col-md-3" ng-repeat="a in possibleAnswers">
-                          <div class="btn wow slideInRight" data-wow-delay="3.{{$index+2}}s" ng-click="responder(a)">
+                          <div class="btn wow fadeIn" data-wow-delay="3.{{$index+5}}s" ng-click="responder(a)">
                             <div class="row">
                               <div class="col-xs-12">
                                 <p>{{a}}</p>

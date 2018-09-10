@@ -4,13 +4,14 @@
                 <div class="col-md-12" >
                 	<div class="head">
                 		<p> #historiascondatos </p>
-                    	<h2> Somos una ciudad que se filma. </h2>
+                    	<h2> Buenos Aires, una ciudad que se filma. </h2>
                    	</div>
                     <h3 ng-repeat="s in stats">
                 	 <i class="fas fa-{{s.icon}}"></i>	{{s.number}} {{s.label}}
                 	</h3>
-                	<h2 class="wow bounceInUp">¿Podrás adivinar si tu barrio es de película ? </h2>
-                	  <h5 class="btn btn-50  wow bounceInUp"
+                	<h2 class="wow fadeIn">¿Podrás adivinar si tu barrio es de película ? </h2>
+                	  <h5 class="btn btn-50  wow fadeIn"
+                	  	data-wow-delay="3s"
                 	  	ng-click="startGame()">
                 	  Empezá
                 	</h5>
@@ -21,7 +22,3 @@
               
                 
 </div>
-<!-- Large modal -->
-<button type="button" class="btn"  data-toggle="modal" data-target=".bs-example-modal-lg"> ¿Quienes trabajamos en esto?</button>
-
-

@@ -26,6 +26,10 @@ angular.module('initApp',['ngRoute', 'ngAnimate'])
         templateUrl: 'views/check/stats.html',
         controller: 'statsController'
       })
+      .when('/locations', {
+        templateUrl: 'views/check/locations.html',
+        controller: 'locationsController'
+      })
 });
  
 new WOW().init();
@@ -75,4 +79,13 @@ function getRandom(arr, n) {
         taken[x] = --len in taken ? taken[len] : len;
     }
     return result;
+}
+
+function toTitleCase(str) {
+    return str.replace(
+        /\w\S*/g,
+        function(txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        }
+    );
 }

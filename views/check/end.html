@@ -19,27 +19,22 @@
                     <a ng-href="https://twitter.com/intent/tweet?text=Vos,%20%C2%BFcu%C3%A1nto%20sab%C3%A9s%20sobre%20el%20debate%20por%20el%20%23AbortoLegal?%20Yo%20alcanc%C3%A9%20{{currentGame.points}}/5%20respuestas%20correctas.%0A%20https%3A//www.huesped.org.ar/aborto-VoF/" target="_blank" class="waves-effect waves-light btn share" href=""><i class="fab fa-twitter fa-2" aria-hidden="true"></i></a>
                 </div>
             </div>
+            <h5> <a href="#/stats" class="btn " >Descubrí como se filma en la ciudad.</a></h5>
         </div>
       <div class="col-xs-12">
                  
               <h2 class="center no-click"> <strong> Resumen de tu Juego </strong> </h2>
    
             <div ng-repeat="q in currentGame.questions">
-              <h5> <strong> {{q.TITULO_PROYECTO}}</strong> se filmó el {{q.FECHA_RODAJE}} en </h5>
-              <p> {{q.COMUNA}} {{q.BARRIO}}</p>
-                <h3><strong> {{q.DIRECCION}} </strong></h3>
-              <h2> <small>Respondiente <strong> {{q.tuRespuesta}} </strong></small></h2>
-               <img src="https://maps.googleapis.com/maps/api/staticmap?center={{q.lat}},{{q.lon}}&zoom=14&size=300x300&markers=color:red%7Clabel:C%7C{{q.lat}},{{q.lon}}&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY">
-              <img src="https://maps.googleapis.com/maps/api/streetview?size=300x300&location={{q.lat}},{{q.lon}}&sensor=false&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY">
-             
-            <div class="small">
-                
-                
-            </div>
+              <h2> <strong> {{q.TITULO_PROYECTO}}</strong> tiene una escena filmada el {{q.FECHA_RODAJE}} en </h2>
+              <h3>  {{q.DIRECCION}}, {{q.BARRIO}}, {{q.COMUNA}} </h3>
+              <h4> Respondiente <strong> {{q.tuRespuesta}} </strong></small></h4>
+              <div class="row">
+                <div class="col-xs-6"> <img src="https://maps.googleapis.com/maps/api/staticmap?center={{q.lat}},{{q.lon}}&zoom=14&size=300x300&markers=color:red%7Clabel:C%7C{{q.lat}},{{q.lon}}&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY"></div>
+                <div class="col-xs-6"> <img src="https://maps.googleapis.com/maps/api/streetview?size=300x300&location={{q.lat}},{{q.lon}}&sensor=false&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY"></div>
+              </div>
         </div>
     </div>
-
-   
-   </div>
+</div>
 
 

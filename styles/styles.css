@@ -12,8 +12,8 @@ html,body{
     font-weight: 700;
     background-color: #E91E63;
     color: white;
+    max-width: 100%;
     margin: 4px;
-    
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
@@ -424,4 +424,10 @@ footer p {
     .container {
         max-width: 1472px;
     }
+}
+
+.search {
+    height: 50vh;
+    background: #8080803d;
+    overflow: scroll;
 }
