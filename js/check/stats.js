@@ -68,24 +68,30 @@ angular.module('initApp')
         $rootScope.netoVideoClips= d3.map($rootScope.videoClips, function(d){return d.TITULO_PROYECTO.toLowerCase();}).keys();
         $rootScope.netoMovies= d3.map($rootScope.movies, function(d){return d.TITULO_PROYECTO.toLowerCase();}).keys();
 
+        var orderUpperNest = function(a,b){
+		        	return b.values.length - a.values.length ;
+		        };
         $rootScope.comunas = d3.nest()
 		        .key(function(d) {
 		          
 		          return toTitleCase(d.COMUNA);
 		        })
-		        .entries(data);
+		        .entries(data)
+		        .sort(orderUpperNest);
 		$rootScope.barrios = d3.nest()
 		        .key(function(d) {
 		          
 		          return toTitleCase(d.BARRIO);
 		        })
-		        .entries(data);
+		        .entries(data)
+		        .sort(orderUpperNest);
 		$rootScope.produccionesFilter = d3.nest()
 		        .key(function(d) {
 		          
 		          return toTitleCase(d.TITULO_PROYECTO);
 		        })
-		        .entries($rootScope.readyToCheck);
+		        .entries($rootScope.readyToCheck)
+		        .sort(orderUpperNest);
         $rootScope.netofechas = d3.map(data, function(d){return d.FECHA_RODAJE;}).keys();
         $rootScope.netoPeriodo = d3.map(data, function(d){return d.PERIODO;}).keys();
         $rootScope.netoProducciones = d3.map(data, function(d){return d.TITULO_PROYECTO;}).keys();
