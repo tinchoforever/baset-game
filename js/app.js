@@ -30,6 +30,10 @@ angular.module('initApp',['ngRoute', 'ngAnimate'])
         templateUrl: 'views/check/locations.html',
         controller: 'locationsController'
       })
+       .when('/producciones', {
+        templateUrl: 'views/check/producciones.html',
+        controller: 'produccionesController'
+      })
 });
  
 new WOW().init();

@@ -80,6 +80,12 @@ angular.module('initApp')
 		          return toTitleCase(d.BARRIO);
 		        })
 		        .entries(data);
+		$rootScope.produccionesFilter = d3.nest()
+		        .key(function(d) {
+		          
+		          return toTitleCase(d.TITULO_PROYECTO);
+		        })
+		        .entries($rootScope.readyToCheck);
         $rootScope.netofechas = d3.map(data, function(d){return d.FECHA_RODAJE;}).keys();
         $rootScope.netoPeriodo = d3.map(data, function(d){return d.PERIODO;}).keys();
         $rootScope.netoProducciones = d3.map(data, function(d){return d.TITULO_PROYECTO;}).keys();

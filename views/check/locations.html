@@ -1,0 +1,25 @@
+<div class="container">
+            <div class="row ">
+                <div class="col-md-12" ><div class="head">
+                		<p> #historiascondatos </p>
+                    	<h2> Buenos Aires, una ciudad que se filma. </h2>
+                   	</div>
+			<h2> Se utilizaron mas de <strong>{{netoLocaciones.length}}</strong> locaciones. </h2>
+			<p> <a href=""> ¿Cuales son los lugares mas populares?</a> </p>
+
+			<h1> Selecciona la comuna donde estas o activa localizacion.</h1>
+			<h2> Comunas </h2>
+				<div class="col-xs-12 col-md-6 search">
+					<div ng-repeat="c in comunas">
+						<h3> {{c.key}} {{c.values.length}}</h3>
+					</div>
+				</div>
+			<h2> Barrio </h2>
+				<div class="col-xs-12 col-md-6 search">
+					<div ng-repeat="c in barrios">
+						<h3> {{c.key}} {{c.values.length}}</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
