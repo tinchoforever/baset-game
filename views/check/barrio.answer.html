@@ -14,8 +14,14 @@
                    {{currentCheck.COMUNA}} - {{currentCheck.BARRIO}}
                 </strong>
               <h4> {{currentCheck.DIRECCION}}</h4>
+<<<<<<< HEAD:views/check/answer.html
               <div class="row mapa">
                 <div class="col-xs-6"><img src="https://maps.googleapis.com/maps/api/staticmap?center={{currentCheck.lat}},{{currentCheck.lon}}&zoom=14&size=250x300&markers=color:red%7Clabel:C%7C{{currentCheck.lat}},{{currentCheck.lon}}&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY"></div>
+=======
+              <div class="row">
+                <div class="col-xs-6"><img src="
+                  http://servicios.usig.buenosaires.gob.ar/LocDir/mapa.phtml?y={{currentCheck.lat.replace(',','.')}}&x={{currentCheck.lon.replace(',','.')}}&w=250&r=200&punto=1"></div>
+>>>>>>> 79f2b1729fd485cd62e1e073d5de11b043a351a4:views/check/barrio.answer.html
                 <div class="col-xs-6">
       <img src="https://maps.googleapis.com/maps/api/streetview?size=250x300&location={{currentCheck.lat}},{{currentCheck.lon}}&sensor=false&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY"></div>
               </div>
