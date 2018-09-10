@@ -1,7 +1,7 @@
 
 html,body{
     color:black;
-    background: repeating-linear-gradient( -45deg, #ffec0b,  #ffff34 10px );
+   background: repeating-linear-gradient( 45deg, #ffffff, #ffffff 5px, #fff9dc 5px, #fff9dc 10px );
    
 }
 .head{
@@ -10,7 +10,6 @@ html,body{
     white-space: normal;
     text-transform: uppercase;
     font-weight: 700;
-    background-color: #E91E63;
     color: white;
     max-width: 100%;
     margin: 4px;
@@ -25,14 +24,22 @@ html,body{
     -ms-touch-action: manipulation;
     touch-action: manipulation;
     background-image: none;
-    border: 6px solid white;
+    border: 1px solid silver;
     border-radius: 12px;
+    background: linear-gradient(90deg,#ffbc00 0,#ffd300);
 }
 
 h3{
-    font-family: 'OpenSans';
+    font-family: 'Roboto';
+    color: gray;
+    font-weight: 100;
+    font-size: 17px;
+    margin: 8px;
 }
 
+h3 i{
+  margin-right: 5px;  
+}
 a{
     color:black;
 }
@@ -148,11 +155,11 @@ h4{
 
 a{
     text-decoration: underline;
-    color: #E91E63;
+    color: #19c3e3;
 }
 a:visited{
     text-decoration: underline;
-    color: #E91E63;
+    color: #19c3e3;
 }
 h5 a.btn{
     color:white;
@@ -167,7 +174,7 @@ a.btn {
     white-space: normal;
     text-transform: uppercase;
     font-weight: 700;
-    background-color: #E91E63;
+    background-color: #19c3e3;
     color:white;
     margin: 4px;
     width: 100%;
