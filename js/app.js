@@ -10,12 +10,20 @@ angular.module('initApp',['ngRoute', 'ngAnimate'])
         templateUrl: 'views/check/main.html',
         controller: 'mainController'
       })
-       .when('/pregunta', {
-        templateUrl: 'views/check/question.html',
+       .when('/pregunta/barrio', {
+        templateUrl: 'views/check/barrio.question.html',
         controller: 'questionController'
       })
-        .when('/respuesta', {
-        templateUrl: 'views/check/answer.html',
+        .when('/respuesta/barrio', {
+        templateUrl: 'views/check/barrio.answer.html',
+        controller: 'questionController'
+      })
+        .when('/pregunta/titulo', {
+        templateUrl: 'views/check/series.question.html',
+        controller: 'questionController'
+      })
+        .when('/respuesta/titulo', {
+        templateUrl: 'views/check/series.answer.html',
         controller: 'questionController'
       })
       .when('/fin', {

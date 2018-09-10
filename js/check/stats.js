@@ -94,7 +94,7 @@ angular.module('initApp')
 		        .sort(orderUpperNest);
         $rootScope.netofechas = d3.map(data, function(d){return d.FECHA_RODAJE;}).keys();
         $rootScope.netoPeriodo = d3.map(data, function(d){return d.PERIODO;}).keys();
-        $rootScope.netoProducciones = d3.map(data, function(d){return d.TITULO_PROYECTO;}).keys();
+        $rootScope.netoProducciones = d3.map(data, function(d){return d.TITULO_PROYECTO.toLowerCase();}).keys();
         $rootScope.netoLocaciones = d3.map(data, function(d){return d.DIRECCION;}).keys();
         $rootScope.producciones = d3.map($rootScope.readyToCheck, function(d){return d.TITULO_PROYECTO;}).keys();
 

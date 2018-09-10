@@ -28,34 +28,40 @@ angular.module('initApp')
         questions: shuffle($rootScope.readyToCheck).slice(0,5)
       }
       $rootScope.currentCheck = $rootScope.currentGame.questions[$rootScope.currentGame.remaing-1];
-      var filteredAnswers = $rootScope.barrios.filter(function(d){
-        return d != $rootScope.currentCheck.BARRIO.toLowerCase();
-      });
-      var randomAnswers = getRandom(filteredAnswers,3);
-      randomAnswers.push($rootScope.currentCheck.BARRIO.toLowerCase());
       
-      $rootScope.possibleAnswers = shuffle(randomAnswers);
+
+      setBarrioQuestion();
+      //Por Titulo de Produccion
+
+
       $rootScope.lastAnswer = {
         result : false,
       }
-      $location.path('pregunta');
+
+      $location.path('pregunta/barrio');
 
       
     }
-    $rootScope.nextQuestion = function(){
+
+    var setTitleQuestion = function(){
+      //Por Titulo de Produccion
+      var filteredAnswersTitulo = $rootScope.readyToCheck.filter(function(d){
+        return d.BARRIO.toLowerCase() != $rootScope.currentCheck.BARRIO.toLowerCase()
+        && d.TITULO_PROYECTO.toLowerCase() != $rootScope.currentCheck.TITULO_PROYECTO.toLowerCase();
+      }).map(function(d){ return d.TITULO_PROYECTO; });
+
+      var randomAnswersTitulo = getRandom(filteredAnswersTitulo,3);
+      randomAnswersTitulo.push($rootScope.currentCheck.TITULO_PROYECTO.toLowerCase());
+      
+      $rootScope.possibleAnswersTitulo = shuffle(randomAnswersTitulo);
+
+    }
+    var setCurrentCheck = function(){
       $rootScope.onQuestion = true;
       $rootScope.onAnswer = false;
       $rootScope.showResume = false;
       $rootScope.currentCheck = $rootScope.currentGame.questions[$rootScope.currentGame.remaing-1];
-      
-      var filteredAnswers = $rootScope.barrios.filter(function(d){
-        return d != $rootScope.currentCheck.BARRIO.toLowerCase();
-      });
-      var randomAnswers = getRandom(filteredAnswers,3);
-      randomAnswers.push($rootScope.currentCheck.BARRIO.toLowerCase());
-      
-      $rootScope.possibleAnswers = shuffle(randomAnswers);
-      $location.path('pregunta');
+
     }
 
     $rootScope.responder = function(c){
@@ -74,10 +80,54 @@ angular.module('initApp')
        if ($rootScope.currentGame.remaing == 0){
           $rootScope.gameFinish = true;
       }
-      $location.path('respuesta');
+      $location.path('respuesta/barrio');
 
     }
+    $rootScope.responderTitle = function(c){
+      var res = $rootScope.currentCheck.TITULO_PROYECTO;
 
+      $rootScope.currentCheck.tuRespuesta = c;
+      $rootScope.lastAnswer.answer = c;
+      $rootScope.lastAnswer.result = c.toLowerCase().trim() ===res.toLowerCase().trim();
+      if ($rootScope.lastAnswer.result){
+        $rootScope.currentGame.points++;
+      }
+      $rootScope.onQuestion =false;
+      $rootScope.onAnswer = true;
+     
+      $rootScope.currentGame.remaing--;
+       if ($rootScope.currentGame.remaing == 0){
+          $rootScope.gameFinish = true;
+      }
+      $location.path('respuesta/titulo');
+
+    }
+    $rootScope.nextQuestion = function(){
+      setCurrentCheck();
+      setTitleQuestion();
+      //moveNext
+      $location.path('pregunta/titulo');
+    };
+    var setBarrioQuestion = function(){
+      //Por Barrio
+      var filteredAnswersBarrio = $rootScope.barrios.filter(function(d){
+        return d != $rootScope.currentCheck.BARRIO.toLowerCase();
+      });
+
+      var randomAnswersBarrio = getRandom(filteredAnswersBarrio,3);
+      randomAnswersBarrio.push($rootScope.currentCheck.BARRIO.toLowerCase());
+      
+      $rootScope.possibleAnswersBarrio = shuffle(randomAnswersBarrio);
+
+    };
+
+    $rootScope.nextQuestionBarrio = function(){
+      setCurrentCheck();
+      setBarrioQuestion();
+      //moveNext
+      $location.path('pregunta/barrio');
+    }
+    
     var invalid = [];
     invalid.push("Largometraje Con I.N.C.A.A.");
     invalid.push("Cine Publicitario");
@@ -134,9 +184,7 @@ angular.module('initApp')
 
         });
         
-        data.map(function(d){
-          
-        });
+        $rootScope.all = data;
         $rootScope.netoTV= d3.map($rootScope.tv, function(d){return d.TITULO_PROYECTO.toLowerCase();}).keys();
         $rootScope.netoVideoClips= d3.map($rootScope.videoClips, function(d){return d.TITULO_PROYECTO.toLowerCase();}).keys();
         $rootScope.netoMovies= d3.map($rootScope.movies, function(d){return d.TITULO_PROYECTO.toLowerCase();}).keys();
