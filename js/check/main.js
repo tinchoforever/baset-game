@@ -108,7 +108,7 @@ angular.module('initApp')
       //moveNext
       $location.path('pregunta/titulo');
     };
-    var setBarrioQuestion = function(){
+    var  setBarrioQuestion = function(){
       //Por Barrio
       var filteredAnswersBarrio = $rootScope.barrios.filter(function(d){
         return d != $rootScope.currentCheck.BARRIO.toLowerCase();
