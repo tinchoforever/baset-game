@@ -15,7 +15,10 @@
               </h3>
               <h4> {{currentCheck.DIRECCION}}</h4>
               <div class="row">
-                <div class="col-xs-6"><img src="https://maps.googleapis.com/maps/api/staticmap?center={{currentCheck.lat}},{{currentCheck.lon}}&zoom=14&size=250x300&markers=color:red%7Clabel:C%7C{{currentCheck.lat}},{{currentCheck.lon}}&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY"></div>
+                <div class="col-xs-6">
+                  <img src="
+                  http://servicios.usig.buenosaires.gob.ar/LocDir/mapa.phtml?y={{currentCheck.lat.replace(',','.')}}&x={{currentCheck.lon.replace(',','.')}}&w=250&r=200&punto=1">s
+                </div>
                 <div class="col-xs-6">
       <img src="https://maps.googleapis.com/maps/api/streetview?size=250x300&location={{currentCheck.lat}},{{currentCheck.lon}}&sensor=false&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY"></div>
               </div>
