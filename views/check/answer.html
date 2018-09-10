@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container respuesta">
            
         <div class=" row second-row answer">
               <div class="col-xs-12">
@@ -6,14 +6,15 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-              <h2><span ng-show="lastAnswer.result"> Correcto! </span>
-              <span ng-hide="lastAnswer.result">Incorrecto.</span>  </h2>
+              <h2>
+              <span ng-show="lastAnswer.result" class="correcto">&#9786; Correcto! &#9786;</span>
+              <span ng-hide="lastAnswer.result" class="incorrecto">&#9785; Incorrecto  &#9785;</span>  </h2>
               <h3>
-                Una escena de <strong>{{currentCheck['TITULO_PROYECTO']}} </strong>({{currentCheck['PERIODO']}}) se filmó el {{currentCheck.FECHA_RODAJE}} en
-<h1 class="wow fadeIn" data-wow-delay="2s" href="">{{currentCheck.COMUNA}} - {{currentCheck.BARRIO}} </h1>
-              </h3>
+                Una escena de <strong>{{currentCheck['TITULO_PROYECTO']}} </strong>({{currentCheck['PERIODO']}}) se filmó el {{currentCheck.FECHA_RODAJE}} en <strong>
+                   {{currentCheck.COMUNA}} - {{currentCheck.BARRIO}}
+                </strong>
               <h4> {{currentCheck.DIRECCION}}</h4>
-              <div class="row">
+              <div class="row mapa">
                 <div class="col-xs-6"><img src="https://maps.googleapis.com/maps/api/staticmap?center={{currentCheck.lat}},{{currentCheck.lon}}&zoom=14&size=250x300&markers=color:red%7Clabel:C%7C{{currentCheck.lat}},{{currentCheck.lon}}&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY"></div>
                 <div class="col-xs-6">
       <img src="https://maps.googleapis.com/maps/api/streetview?size=250x300&location={{currentCheck.lat}},{{currentCheck.lon}}&sensor=false&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY"></div>
@@ -26,7 +27,8 @@
 
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                    <h2> <strong> Tu puntaje es {{currentGame.points}}  > Vas {{currentGame.questions.length - currentGame.remaing}} de {{currentGame.questions.length}} </strong> </h4>
+                    <h2 class="puntaje">Tu puntaje es {{currentGame.points}}</h2>
+                    <h4> Vas {{currentGame.questions.length - currentGame.remaing}} de {{currentGame.questions.length}} </h4>
                     <h5> <a class="btn btn-50" ng-hide="gameFinish" href="" ng-click="nextQuestion()"> Continuar! </a></h5>
                       <h5> <a class="btn btn-50" ng-show="gameFinish" href="" ng-click="finishGame()"> CONOCÉ TUS RESULTADOS.!</a></h5>
             </div>

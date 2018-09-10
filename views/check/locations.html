@@ -13,7 +13,7 @@
 					<div class="col-xs-12 col-md-6 ">
 						<input  class="col-xs-12 col-md-6 " type="text" ng-model="comunaSearch" placeholder="Filtra por nombre" />
 					</div>
-				<div class="col-xs-12 col-md-6 search">
+				<div class="col-xs-12 col-md-6 search listaLocaciones">
 					
 					<div ng-repeat="c in comunas | filter:comunaSearch ">
 
@@ -21,10 +21,10 @@
 						</div>
 						<div class="row">
 							<div class="col-xs-8">
-								<h3> {{c.key}}</h3>		
+								<h5> {{c.key}}</h5>		
 							</div>
 							<div class="col-xs-4">
-								 <h3>{{c.values.length}}</h3>
+								 <h5>{{c.values.length}}</h5>
 							</div>
 						</div>
 					</div>
@@ -33,15 +33,15 @@
 			<div class="col-xs-12 col-md-6 ">
 						<input  class="col-xs-12 col-md-6 " type="text" ng-model="barrioSearch" placeholder="Filtra por nombre del barrio" />
 					</div>
-				<div class="col-xs-12 col-md-6 search">
+				<div class="col-xs-12 col-md-6 search listaLocaciones">
 					<div ng-repeat="c in barrios |filter:barrioSearch">
 
 						<div class="row">
 							<div class="col-xs-8">
-								<h3> {{c.key}}</h3>		
+								<h5> {{c.key}}</h5>		
 							</div>
 							<div class="col-xs-4">
-								 <h3>{{c.values.length}}</h3>
+								 <h5>{{c.values.length}}</h5>
 							</div>
 						</div>
 					</div>

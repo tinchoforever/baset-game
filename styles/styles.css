@@ -30,9 +30,9 @@ html,body{
 }
 
 h3{
-    font-family: 'Roboto';
-    color: gray;
-    font-weight: 100;
+font-family: 'Roboto';
+    color: #4c4c4c;
+    font-weight: 400;
     font-size: 17px;
     margin: 8px;
 }
@@ -44,6 +44,9 @@ a{
     color:black;
 }
 
+strong a{
+        font-weight: 300;
+}
 .wrapper {
     max-width: 1280px;
     margin: 0 auto;
@@ -87,6 +90,26 @@ a{
     padding-top: 2em;
     align-items: baseline;
 }
+
+.respuesta .row{
+        text-align: center;
+}
+
+.respuesta .correcto{
+        color: #ffffff;
+    background-color: #99c25f;
+    padding: 4px 16px;
+    border-radius: 22px;
+}
+
+.respuesta .incorrecto{
+       color: #ffffff;
+    background-color: #e76056;
+    padding: 4px 16px;
+    border-radius: 22px;
+}
+
+
 .share-menu{
 
     text-align: center;
@@ -125,8 +148,9 @@ h4 img{height: 350px;  }
     text-align: center;
     width: 100%;
     margin: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 3px;
+    padding-bottom: 0px;
+    font-weight: 100;
 }
 h2 small, h6 small, h4 small, h5 small{
     font-size: 12px;  
@@ -144,6 +168,17 @@ ul li a {
 }
 h4{
     font-size: 1.2em;
+}
+
+h4 img{
+    margin-left: -30px;
+}
+
+h5 {
+        line-height: 17px;
+    font-weight: 100;
+    font-size: 13px;
+    margin: 0;
 }
 .modal-dialog p{
     color: #683064;
@@ -176,7 +211,7 @@ a.btn {
     font-weight: 700;
     background-color: #19c3e3;
     color:white;
-    margin: 4px;
+    margin: 2px 4px;
     width: 100%;
 }
 .btn-50{
@@ -218,6 +253,10 @@ a.btn {
     text-decoration: underline;
 }
 
+.respuesta .row .mapa{
+    margin-left: -43px;
+}
+    
 .whatis {
     background: #82c35b;
     color: white;
@@ -395,6 +434,11 @@ footer p {
     h4{
         font-size: 1.6em;
     }
+
+    h4 img{
+        margin-left: 0px;
+    }
+
     .container {
         max-width: 100%;
         padding-left: 2em;
@@ -424,6 +468,11 @@ footer p {
     .process h4 {
         padding-right: 7em;
     }
+
+    .respuesta .row .mapa{
+    margin-left: 0px;
+}
+
 }
 
 @media (min-width: 1200px) {
@@ -433,7 +482,10 @@ footer p {
 }
 
 .search {
-    height: 50vh;
-    background: #8080803d;
+    max-height: 25vh;
+    background: #ffffff91;
     overflow: scroll;
+    width: 90%;
+    margin-left: 15px;
+    margin-bottom: 10px;
 }
