@@ -1,0 +1,27 @@
+<div class="container">
+            <div class="row ">
+                <div class="col-md-12" ><div class="head">
+                		<p> #historiascondatos </p>
+                    	<h2> Buenos Aires, una ciudad que se filma. </h2>
+                   	</div>
+			<h2> Se filmaron mas de <strong>{{producciones.length}}</strong> producciones. </h2>
+			<p> <a href=""> ¿Cuales son las producciones que mas usaron la ciudad como escenario?</a> </p>
+			<h3> <strong>{{temas.key}} </strong> se filmó en {{temas.values.length}} Jornadas </h3>
+			<p> Tuvo mas de {{temas.values.lenght}} lugares diferentes </p>
+			<p> La variedad de lugares incluyen barrios como <strong> Palermo, Monserrat y Puerto Madero </strong>
+			</p>
+			<p> A continuacion te mostramos las locaciones que utilizaron </p>
+			<div class="search row">
+			<div ng-repeat="q in temas.values" >
+              <h2> <strong>El {{q.FECHA_RODAJE}} en filmó en</strong>
+              {{q.DIRECCION}}, {{q.BARRIO}}, {{q.COMUNA}} </h3>
+              <div class="row">
+                <div class="col-xs-6"> <img src="https://maps.googleapis.com/maps/api/staticmap?center={{q.lat}},{{q.lon}}&zoom=14&size=300x300&markers=color:red%7Clabel:C%7C{{q.lat}},{{q.lon}}&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY"></div>
+                <div class="col-xs-6"> <img src="https://maps.googleapis.com/maps/api/streetview?size=300x300&location={{q.lat}},{{q.lon}}&sensor=false&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY"></div>
+          		</div>
+        	</div>
+        </div>
+        	
+			
+		</div>
+</div>
