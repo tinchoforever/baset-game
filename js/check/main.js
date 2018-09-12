@@ -3,10 +3,10 @@
 angular.module('initApp')
   .controller('mainController', function ($scope, $rootScope, $location) {
     var url = 'data/baset.csv';
-
+    var gameCount = 5;
     $rootScope.currentGame = {
       points:0,
-      remaing: 5,
+      remaing: gameCount,
     }
     $rootScope.lastAnswer = {
       result : false,
@@ -24,8 +24,8 @@ angular.module('initApp')
       
       $rootScope.currentGame = {
         points:0,
-        remaing: 5,
-        questions: shuffle($rootScope.readyToCheck).slice(0,5)
+        remaing: gameCount,
+        questions: shuffle($rootScope.readyToCheck).slice(0,gameCount)
       }
       $rootScope.currentCheck = $rootScope.currentGame.questions[$rootScope.currentGame.remaing-1];
       
@@ -72,6 +72,7 @@ angular.module('initApp')
       $rootScope.currentCheck.tuRespuesta = c;
       $rootScope.lastAnswer.answer = c;
       $rootScope.lastAnswer.result = c.toLowerCase().trim() ===res.toLowerCase().trim();
+      $rootScope.currentCheck.result=$rootScope.lastAnswer.result;
       if ($rootScope.lastAnswer.result){
         $rootScope.currentGame.points++;
       }

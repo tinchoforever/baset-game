@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container respuesta">
            
         <div class=" row second-row answer">
               <div class="col-xs-12">
@@ -6,19 +6,16 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-              <h2><span ng-show="lastAnswer.result"> Correcto! </span>
-              <span ng-hide="lastAnswer.result">Incorrecto.</span>  </h2>
-              <h3>
-                ({{currentCheck['PERIODO']}}) El {{currentCheck.FECHA_RODAJE}} en <strong> {{currentCheck.COMUNA}} - {{currentCheck.BARRIO}}  </strong> se filmó una escena de 
+                <span ng-show="lastAnswer.result" class="correcto">&#9786; Correcto! &#9786;</span>
+              <span ng-hide="lastAnswer.result" class="incorrecto">&#9785; Incorrecto  &#9785;</span>  </h2>
+            <h2>
+                El {{currentCheck.FECHA_RODAJE}} en <strong> {{currentCheck.BARRIO}}, {{currentCheck.COMUNA}}  </strong> se filmó una escena de </h2> 
 <h1 class="wow fadeIn" data-wow-delay="2s" href="">
  <a ng-href='https://www.imdb.com/search/title?title="{{currentCheck.TITULO_PROYECTO}}"' target="_blank"> {{currentCheck['TITULO_PROYECTO']}} </a></h1>
-              </h3>
               <h4> {{currentCheck.DIRECCION}}</h4>
               <div class="row">
-                <div class="col-xs-6">
-                  <img src="
-                  http://servicios.usig.buenosaires.gob.ar/LocDir/mapa.phtml?y={{currentCheck.lat.replace(',','.')}}&x={{currentCheck.lon.replace(',','.')}}&w=250&r=200&punto=1">s
-                </div>
+                <div class="col-xs-6"><img src="
+                  http://servicios.usig.buenosaires.gob.ar/LocDir/mapa.phtml?y={{currentCheck.lat.replace(',','.')}}&x={{currentCheck.lon.replace(',','.')}}&w=250&r=200&punto=1"></div>
                 <div class="col-xs-6">
       <img src="https://maps.googleapis.com/maps/api/streetview?size=250x300&location={{currentCheck.lat}},{{currentCheck.lon}}&sensor=false&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY"></div>
               </div>
@@ -30,9 +27,12 @@
 
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                    <h2> <strong> Tu puntaje es {{currentGame.points}}  > Vas {{currentGame.questions.length - currentGame.remaing}} de {{currentGame.questions.length}} </strong> </h4>
+                    <h2> <strong> Tu puntaje es {{currentGame.points}}  </strong> </h2> 
+                    <h4 ng-hide="gameFinish">
+                    Quedan {{currentGame.remaing}} de {{currentGame.questions.length}} </strong> </h4>
+                    <h4 ng-show="gameFinish"> Conocé tus resultados.</h4>
                     <h5> <a class="btn btn-50" ng-hide="gameFinish" href="" ng-click="nextQuestionBarrio()"> Continuar! </a></h5>
-                      <h5> <a class="btn btn-50" ng-show="gameFinish" href="" ng-click="finishGame()"> CONOCÉ TUS RESULTADOS.!</a></h5>
+                      <h5> <a class="btn btn-50" ng-show="gameFinish" href="" ng-click="finishGame()"> Terminar</a></h5>
             </div>
             <div class="col-md-2"></div>
             

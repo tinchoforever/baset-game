@@ -30,11 +30,10 @@ html,body{
 }
 
 h3{
-font-family: 'Roboto';
+    font-family: 'OpenSans';
     color: #4c4c4c;
     font-weight: 400;
-    font-size: 17px;
-    margin: 8px;
+    
 }
 
 h3 i{
@@ -488,4 +487,11 @@ footer p {
     width: 90%;
     margin-left: 15px;
     margin-bottom: 10px;
+}
+hr{
+    border-top: 6px solid #ffbc00;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    
 }

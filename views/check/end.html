@@ -2,12 +2,13 @@
         <div class="row">
             
               <div class="col-xs-12">
+                <h1> Terminaste!
                 <h2> Tu puntaje fue {{currentGame.points}}! </h2>
               </div>
             <div class="col-xs-12 col-md-6">
              <div class="row">
                 <div class="col-xs-6">
-                    <p class="">Compartí tu puntaje:</p>
+                    <h3 class="">Compartí tu puntaje:</h3>
                 </div>
                 <div class="col-xs-2 share-menu animated dur-2">
                     <a class="waves-effect waves-light btn share" href="https://www.facebook.com/sharer/sharer.php?u=%20https%3A//www.huesped.org.ar/aborto-VoF/" target="_blank"><i class="fab fa-facebook fa-2" aria-hidden="true"></i></a>
@@ -20,30 +21,36 @@
                     <a ng-href="https://twitter.com/intent/tweet?text=Vos,%20%C2%BFcu%C3%A1nto%20sab%C3%A9s%20sobre%20el%20debate%20por%20el%20%23AbortoLegal?%20Yo%20alcanc%C3%A9%20{{currentGame.points}}/5%20respuestas%20correctas.%0A%20https%3A//www.huesped.org.ar/aborto-VoF/" target="_blank" class="waves-effect waves-light btn share" href=""><i class="fab fa-twitter fa-2" aria-hidden="true"></i></a>
                 </div>
             </div>
-                   <h5> <a href="" class="btn " ng-click="startGame()">Jugá de nuevo</a></h5>
+                   <h3> <a href="" class="btn " ng-click="startGame()">Jugá de nuevo</a></h3>
+                   
           </div>
         
         <div class="col-xs-12 col-md-6">
-            <p>Descubrí como se filma en la ciudad en este interactivo.</p>
-            <h5> <a href="#/stats" class="btn"> Ver mapa interactivo completo.</a></h5>
+            <h3>Descubrí como se filma en la ciudad en este interactivo.</p>
+            <h5> <a href="#/stats" class="btn"> Explorálo.</a></h5>
         </div>
         </div>
         <div class="row">
         
         
-      <div class="col-xs-12">
-                 
-              <h3 class="center no-click"> Resumen de tu Juego </h2>
+      <div class="col-xs-12 respuesta">
+                 <hr/>
+              <h1 class="center no-click"> Resumen de tu Juego </h1>
    
             <div ng-repeat="q in currentGame.questions">
-              <h3> <strong> {{q.TITULO_PROYECTO}}</strong> tiene una escena filmada el {{q.FECHA_RODAJE}} en </h3>
-              <h4>  {{q.DIRECCION}}, {{q.BARRIO}}, {{q.COMUNA}} </h4>
-              <h4> Respondiente <strong> {{q.tuRespuesta}} </strong></small></h4>
+              <h2> <strong> <a ng-href='https://www.imdb.com/search/title?title="{{q.TITULO_PROYECTO}}"' target="_blank"> {{q.TITULO_PROYECTO}} ({{currentCheck['PERIODO']}}) </a></strong></h2>
+              <h3> tiene una escena filmada el {{q.FECHA_RODAJE}} en </h3>
+              <h2>  {{q.BARRIO}}, {{q.COMUNA}} </h2>
+              <p>{{q.DIRECCION}}</p>
+              <h2> <span ng-show="q.result" class="correcto">&#9786; Correcto! &#9786;</span>
+              <span ng-hide="q.result" class="incorrecto">&#9785; Incorrecto  &#9785;</span></h4>
+              <h4> Respondiente <strong> {{q.tuRespuesta  | uppercase}} </strong></small></h4>
               <div class="row">
                 <div class="col-xs-6"> <img src="
                   http://servicios.usig.buenosaires.gob.ar/LocDir/mapa.phtml?y={{q.lat.replace(',','.')}}&x={{q.lon.replace(',','.')}}&w=300&r=200&punto=1"></div>
                 <div class="col-xs-6"> <img src="https://maps.googleapis.com/maps/api/streetview?size=300x300&location={{q.lat}},{{q.lon}}&sensor=false&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY"></div>
               </div>
+               <hr/>
         </div>
     </div>
 </div>
