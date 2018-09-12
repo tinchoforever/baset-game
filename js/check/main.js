@@ -198,7 +198,7 @@ angular.module('initApp')
         $rootScope.netoProducciones = d3.map(data, function(d){return d.TITULO_PROYECTO;}).keys();
         $rootScope.netoLocaciones = d3.map(data, function(d){return d.DIRECCION;}).keys();
         $rootScope.producciones = d3.map($rootScope.readyToCheck, function(d){return d.TITULO_PROYECTO;}).keys();
-
+        console.log($rootScope.producciones);
 
         $rootScope.stats =[];
         $rootScope.stats.push({
