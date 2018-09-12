@@ -7,3 +7,5 @@ Con los datos abiertos de BASET, creamos un juego interactivo para descubrir com
 
 ## ¿Cómo utilizarlo?
 
+
+
