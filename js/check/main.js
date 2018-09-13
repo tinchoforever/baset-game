@@ -19,7 +19,7 @@ angular.module('initApp')
       $location.path('fin');
     }
     $rootScope.startGame = function(){
-      
+      $('.background-poster').remove();
       $rootScope.gameFinish = false;
       
       $rootScope.currentGame = {
