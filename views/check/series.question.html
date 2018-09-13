@@ -12,7 +12,13 @@
                         {{currentCheck['TIPO_PRODUCCION']}}   </
                        </h3>
                        <h4 class="wow fadeIn">¿Cuál de estas producciones tiene escenas filmadas en {{currentCheck['BARRIO']}}? </h4>
-                     <h4 class="center"><caba-chart container="'caba'" highlight="currentCheck['BARRIO']"></caba-chart></h4>
+                     <div class="row center">
+                      <div class="col-xs-0 col-md-4">
+                        <p></p>
+                      </div>
+                      <div class="col-xs-12 col-md-4">
+                      <caba-chart container="'caba'" highlight="currentCheck['BARRIO']"></caba-chart></div>
+                    </div>
                         
                     
                 <div class="row">
