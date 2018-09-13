@@ -495,3 +495,7 @@ hr{
     border-radius: 12px;
     
 }
+
+h3 a.btn {
+    color: white;
+}

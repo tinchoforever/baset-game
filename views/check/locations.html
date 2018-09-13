@@ -7,45 +7,14 @@
 			<h2> Se utilizaron mas de <strong>{{netoLocaciones.length}}</strong> locaciones. </h2>
 			<p> <a href=""> ¿Cuales son los lugares mas populares?</a> </p>
 
-			<p> Selecciona la comuna donde estas o activa localizacion.</p>
-			<h2> Comunas </h2>
-
-					<div class="col-xs-12 col-md-6 ">
-						<input  class="col-xs-12 col-md-6 " type="text" ng-model="comunaSearch" placeholder="Filtra por nombre" />
-					</div>
-				<div class="col-xs-12 col-md-6 search listaLocaciones">
-					
-					<div ng-repeat="c in comunas | filter:comunaSearch ">
-
-						<div class="row">
-						</div>
-						<div class="row">
-							<div class="col-xs-8">
-								<h5> {{c.key}}</h5>		
-							</div>
-							<div class="col-xs-4">
-								 <h5>{{c.values.length}}</h5>
-							</div>
-						</div>
-					</div>
-				</div>
-			<h2> Barrio </h2>
-			<div class="col-xs-12 col-md-6 ">
-						<input  class="col-xs-12 col-md-6 " type="text" ng-model="barrioSearch" placeholder="Filtra por nombre del barrio" />
-					</div>
-				<div class="col-xs-12 col-md-6 search listaLocaciones">
-					<div ng-repeat="c in barrios |filter:barrioSearch">
-
-						<div class="row">
-							<div class="col-xs-8">
-								<h5> {{c.key}}</h5>		
-							</div>
-							<div class="col-xs-4">
-								 <h5>{{c.values.length}}</h5>
-							</div>
-						</div>
-					</div>
-				</div>
+			<p> Selecciona el barrio donde estas.</p>
+			<select ng-options="s as s.key for s in barrios" 
+   ng-model="selectedBarrio" ng-change="changeOption()"></select>
+			<caba-chart container="'caba'" data='barrios' highlight='selectedBarrio'></caba-chart>
+			
+			<div class="col-xs-12 col-md-12 " ng-show="selectedBarrio.key">
+						<h1> {{selectedBarrio.key}} tuvo 
+						{{selectedBarrio.values.length}} filmaciones desde 2011 </h1>
 			</div>
 		</div>
 </div>

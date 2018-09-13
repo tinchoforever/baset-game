@@ -59,12 +59,12 @@ d3.xml("images/main.svg").mimeType("image/svg+xml").get(function(error, xml) {
         if (highlight){
           highlight = highlight.replace(' ', '_');
           d3.select('svg #' + highlight.toUpperCase())
-              .transition().duration(20)
-              .style("fill", "#fff9dc")
+              .transition().duration(500)
+              .style("fill", "#19c3e3")
             .transition().duration(1000)
               .style("fill", "#fff9dc")
-            .transition().delay(1000).duration(5000)
-              .style("fill", "#ffbc00")
+            .transition().duration(5000)
+              .style("fill", "#19c3e3")
         }
 
 
@@ -75,3 +75,17 @@ d3.xml("images/main.svg").mimeType("image/svg+xml").get(function(error, xml) {
 
 
 
+window.reloadGraph = function(data,highlight){
+    // mainDataset = prepareData(data);
+    // loadDataset(data);
+    if (highlight){
+          highlight = highlight.replace(' ', '_');
+          d3.select('svg #' + highlight.toUpperCase())
+              .transition().duration(500)
+              .style("fill", "#19c3e3")
+            .transition().duration(1000)
+              .style("fill", "#fff9dc")
+            .transition().duration(5000)
+              .style("fill", "#19c3e3")
+        }
+  }
