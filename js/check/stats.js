@@ -85,6 +85,18 @@ angular.module('initApp')
 		        })
 		        .entries(data)
 		        .sort(orderUpperNest);
+
+    $rootScope.barrios.map(function(b){
+      b.proyectos = d3.nest()
+            .key(function(d) {
+              
+              return toTitleCase(d.TITULO_PROYECTO);
+            })
+            .entries(b.values)
+            .sort(orderUpperNest);
+    });
+
+
 		$rootScope.produccionesFilter = d3.nest()
 		        .key(function(d) {
 		          

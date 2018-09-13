@@ -8,7 +8,7 @@ angular.module('initApp')
   		reloadGraph($scope.selectedBarrio, $scope.selectedBarrio.key);
   	}
   	$scope.highlightPoint = function(c){
-  		c = c.replace('_',' ');
+  		c = c.replace('_',' ').replace('_',' ');
   		$scope.$apply(function(){
   			var f = $scope.barrios.filter(function(b){
   				return b.key.toUpperCase() === c;

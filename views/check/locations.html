@@ -4,19 +4,34 @@
                 		<p> #historiascondatos </p>
                     	<h2> Buenos Aires, una ciudad que se filma. </h2>
                    	</div>
-               
+               </div>
+            <div class="col-xs-12 col-md-6" >
 			<h2> Se utilizaron mas de <strong>{{netoLocaciones.length}}</strong> locaciones. </h2>
 			<p> <a href=""> ¿Cuales son los lugares mas populares?</a> </p>
-			<div class="col-xs-12 col-md-6" >
 				<p> Selecciona el barrio donde estas. 
 					<select ng-options="s as s.key for s in barrios" ng-model="selectedBarrio" ng-change="changeOption()"></select></p>
-			</div>
-			</div>		<div class="col-xs-12 col-md-6" >
+			
 			<caba-chart container="'caba'" data='barrios' highlight='selectedBarrio'></caba-chart>
 			</div>
+
 			<div class="col-xs-12 col-md-6" ng-show="selectedBarrio.key">
 						<h1> {{selectedBarrio.key}} tuvo 
 						{{selectedBarrio.values.length}} filmaciones desde 2011 </h1>
+					<div ng-repeat="c in selectedBarrio.proyectos.slice(0,10) |filter:produccionSearch">
+						<div class="row">
+							<div class="col-xs-6">
+								<h3> <a href="#/produccion/{{c.key}}">{{c.key}}</a></h3>		
+							</div>
+							<div class="col-xs-4">
+								<h3> <a href="#/produccion/{{c.key}}"><small>{{c.values[0].TIPO_PRODUCCION}}</small></a></h3>		
+							</div>
+							<div class="col-xs-2">
+								 <h3>{{c.values.length}}</h3>
+							</div>
+						</div>
+						
+					</div>
+
 			</div>
 			</div>
 		</div>
