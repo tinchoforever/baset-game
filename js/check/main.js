@@ -52,7 +52,18 @@ angular.module('initApp')
 
       var randomAnswersTitulo = getRandom(filteredAnswersTitulo,3);
       randomAnswersTitulo.push($rootScope.currentCheck.TITULO_PROYECTO.toLowerCase());
-      
+            
+      $rootScope.currentBarrio = $rootScope.barriosFiltered.filter(function(d){
+        if (d.key.toLowerCase() === $rootScope.currentCheck.BARRIO.toLowerCase()){
+          return d;
+        }
+      })[0];
+
+      $rootScope.currentTitle = $rootScope.produccionesFilter.filter(function(d){
+        if (d.key.toLowerCase() === $rootScope.currentCheck.TITULO_PROYECTO.toLowerCase()){
+          return d;
+        }
+      })[0];
       $rootScope.possibleAnswersTitulo = shuffle(randomAnswersTitulo);
 
     }
@@ -120,6 +131,19 @@ angular.module('initApp')
       var randomAnswersBarrio = getRandom(filteredAnswersBarrio,3);
       randomAnswersBarrio.push($rootScope.currentCheck.BARRIO.toLowerCase());
       
+      $rootScope.currentBarrio = $rootScope.barriosFiltered.filter(function(d){
+        if (d.key.toLowerCase() === $rootScope.currentCheck.BARRIO.toLowerCase()){
+          return d;
+        }
+      })[0];
+
+      $rootScope.currentTitle = $rootScope.produccionesFilter.filter(function(d){
+        if (d.key.toLowerCase() === $rootScope.currentCheck.TITULO_PROYECTO.toLowerCase()){
+          return d;
+        }
+      })[0];
+
+
       $rootScope.possibleAnswersBarrio = shuffle(randomAnswersBarrio);
 
     };
@@ -186,7 +210,24 @@ angular.module('initApp')
             }
 
         });
-        
+
+         var orderUpperNest = function(a,b){
+              return b.values.length - a.values.length ;
+            };
+        $rootScope.barriosFiltered = d3.nest()
+            .key(function(d) {
+              
+              return toTitleCase(d.BARRIO);
+            })
+            .entries(data)
+            .sort(orderUpperNest);
+    $rootScope.produccionesFilter = d3.nest()
+            .key(function(d) {
+              
+              return toTitleCase(d.TITULO_PROYECTO);
+            })
+            .entries($rootScope.readyToCheck)
+            .sort(orderUpperNest);
         $rootScope.all = data;
         $rootScope.netoTV= d3.map($rootScope.tv, function(d){return d.TITULO_PROYECTO.toLowerCase();}).keys();
         $rootScope.netoVideoClips= d3.map($rootScope.videoClips, function(d){return d.TITULO_PROYECTO.toLowerCase();}).keys();

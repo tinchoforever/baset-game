@@ -6,13 +6,13 @@
                 <div class="col-md-12">
                    
                     <h2> <strong>
-                    {{currentCheck['TITULO_PROYECTO']}}({{currentCheck['PERIODO']}}) </strong> 
+                    {{currentCheck['TITULO_PROYECTO']}} ({{currentCheck['PERIODO']}})</strong> 
                        </h2>
                        <h3>
-                        {{currentCheck['TIPO_PRODUCCION']}}  
+                         tuvo <strong>{{currentTitle.values.length}} </strong>jornadas de filmación en la ciudad.
                        </h3>
                        <p> <small>¿No sabés que es? <a ng-href='https://www.imdb.com/search/title?title="{{currentCheck.TITULO_PROYECTO}}"' target="_blank"> Ayudate acá... </a></small></p>
-                       <h4 class="wow fadeIn"> ¿Donde está filmada esta escena?</h4>
+                       <h4 class="wow fadeIn"> ¿Dónde está filmada esta escena?</h4>
                      <h4>
       <img src="https://maps.googleapis.com/maps/api/streetview?size=325x300&location={{currentCheck.lat}},{{currentCheck.lon}}&sensor=false&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY"></h4>
                     
