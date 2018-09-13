@@ -61,22 +61,22 @@ d3.xml("images/main.svg").mimeType("image/svg+xml").get(function(error, xml) {
           d3.selectAll('svg path.st1').transition()
             .duration(500).style("fill", "#d1d1d1")
           d3.select('svg #' + highlight.toUpperCase())
-              .transition().duration(500)
+              .transition().duration(200)
               .style("fill", "#19c3e3")
-            .transition().duration(1000)
+            .transition().duration(200)
               .style("fill", "#fff9dc")
-            .transition().duration(5000)
+            .transition().duration(200)
               .style("fill", "#19c3e3")
         }
         d3.selectAll('svg path.st1').on('click',function(d){
           d3.selectAll('svg path.st1').transition()
             .duration(500).style("fill", "#d1d1d1")
           d3.select(this)
-              .transition().duration(500)
+              .transition().duration(200)
               .style("fill", "#19c3e3")
-            .transition().duration(1000)
+            .transition().duration(200)
               .style("fill", "#fff9dc")
-            .transition().duration(5000)
+            .transition().duration(200)
               .style("fill", "#19c3e3")
           window.highlightScope(d3.select(this).attr('id'));
         });
