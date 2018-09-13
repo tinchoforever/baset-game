@@ -11,17 +11,25 @@
 			<h3> Tuvo mas de {{temas.values.lenght}} lugares diferentes. La variedad de lugares incluyen barrios como <strong> Palermo, Monserrat y Puerto Madero </strong>
 			</h3>
 			<p> A continuacion te mostramos las locaciones que utilizaron </p>
-			<div class="search row">
-			<div class="col-xs-12" ng-repeat="q in temas.values" >
-              <h2> <strong>El {{q.FECHA_RODAJE}} en filmó en</strong>
+			<div class="row">
+        <flex-slider flex-slide="q in temas.values track by $index"
+         animation="slide" control-nav="false" slideshow="true" slideshow-speed="3000">
+  <li>
+    <h2> <strong>El {{q.FECHA_RODAJE}} en filmó en</strong>
               {{q.DIRECCION}}, {{q.BARRIO}}, {{q.COMUNA}} </h3>
               <div class="row">
-                <div class="col-xs-6"> <img src="
-                  http://servicios.usig.buenosaires.gob.ar/LocDir/mapa.phtml?y={{q.lat.replace(',','.')}}&x={{q.lon.replace(',','.')}}&w=300&r=200&punto=1"></div>
-                <div class="col-xs-6"> <img src="https://maps.googleapis.com/maps/api/streetview?size=300x300&location={{q.lat}},{{q.lon}}&sensor=false&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY"></div>
-          		</div>
-        	</div>
-        </div>
+                <div class="col-xs-6"> 
+                <img src="
+                  http://servicios.usig.buenosaires.gob.ar/LocDir/mapa.phtml?y={{q.lat.replace(',','.')}}&x={{q.lon.replace(',','.')}}&w=300&r=200&punto=1">
+                </div>
+                <div class="col-xs-6"> 
+                  <img src="https://maps.googleapis.com/maps/api/streetview?size=300x300&location={{q.lat}},{{q.lon}}&sensor=false&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY">
+                </div>
+              </div>
+          </div>
+  </li>
+</flex-slider>
+			
         	
 			
 		</div>

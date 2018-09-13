@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('initApp',['ngRoute', 'ngAnimate'])
+angular.module('initApp',['ngRoute', 'ngAnimate', 'angular-flexslider'])
 .config(['$compileProvider', function($compileProvider) {
     $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|whatsapp|file|tel):/);
   }])
