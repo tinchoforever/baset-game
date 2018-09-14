@@ -7,12 +7,11 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <span ng-show="lastAnswer.result" class="correcto">&#9786; Correcto! &#9786;</span>
-              <span ng-hide="lastAnswer.result" class="incorrecto">&#9785; Incorrecto  &#9785;</span>  </h2>
-            <h2>
-                El {{currentCheck.FECHA_RODAJE}} en <strong> {{currentCheck.BARRIO}}, {{currentCheck.COMUNA}}  </strong> se filmó una escena de </h2> 
-<h1 class="wow fadeIn" data-wow-delay="2s" href="">
- <a ng-href='https://www.imdb.com/search/title?title="{{currentCheck.TITULO_PROYECTO}}"' target="_blank"> {{currentCheck['TITULO_PROYECTO']}} </a></h1>
-              <h4> {{currentCheck.DIRECCION}}</h4>
+              <span ng-hide="lastAnswer.result" class="incorrecto">&#9785; Incorrecto  &#9785;</span> 
+
+              <h3>
+                 En {{currentCheck.DIRECCION}}, <strong>{{currentCheck.BARRIO}} </strong> ({{currentCheck.COMUNA}}) se filmó una escena de <strong>{{currentCheck['TITULO_PROYECTO']}} </strong> el {{currentCheck.FECHA_RODAJE}}</h3>
+<a ng-href='https://www.imdb.com/search/title?title="{{currentCheck.TITULO_PROYECTO}}"' target="_blank"> Ver más sobre esta producción </a>
               <div class="row">
                 <div class="col-xs-6"><img src="
                   http://servicios.usig.buenosaires.gob.ar/LocDir/mapa.phtml?y={{currentCheck.lat.replace(',','.')}}&x={{currentCheck.lon.replace(',','.')}}&w=250&r=200&punto=1"></div>

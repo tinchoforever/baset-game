@@ -9,11 +9,11 @@
                 <span ng-show="lastAnswer.result" class="correcto">&#9786; Correcto! &#9786;</span>
               <span ng-hide="lastAnswer.result" class="incorrecto">&#9785; Incorrecto  &#9785;</span>  </h2>
            
-              <h2>
-                Una escena de <strong>{{currentCheck['TITULO_PROYECTO']}} </strong>({{currentCheck['PERIODO']}}) se filmó el {{currentCheck.FECHA_RODAJE}} en</h2>
-<h1 class="wow fadeIn" data-wow-delay="2s" href="">{{currentCheck.BARRIO}}, {{currentCheck.COMUNA}} </h1>
-              </h3>
-              <h4> {{currentCheck.DIRECCION}}</h4>
+              <h3>
+                Una escena de <strong>{{currentCheck['TITULO_PROYECTO']}} </strong> se filmó el {{currentCheck.FECHA_RODAJE}} en
+{{currentCheck.DIRECCION}}, <strong>{{currentCheck.BARRIO}} </strong> ({{currentCheck.COMUNA}})</h3>
+              
+              
               <div class="row">
                 <div class="col-xs-6"><img src="
                   http://servicios.usig.buenosaires.gob.ar/LocDir/mapa.phtml?y={{currentCheck.lat.replace(',','.')}}&x={{currentCheck.lon.replace(',','.')}}&w=250&r=200&punto=1"></div>

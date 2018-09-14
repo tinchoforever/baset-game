@@ -1,21 +1,23 @@
 <div class="container">
             <div class="row first-row">
                 
-                <div class="col-xs-12" >
+                <div class="col-xs-12 firstSlide" >
                 	<div class="head">
                 		<p> #historiascondatos </p>
                     	<h2> Buenos Aires, una ciudad que se filma. </h2>
                    	</div>
                     <h3>Jugá con los <strong> Datos Abiertos </strong> de la Ciudad.</h3>
-                    <h3 ng-repeat="s in stats">
-                     <i class="fas fa-{{s.icon}}"></i>  {{s.number}} {{s.label}}
-                    </h3>
+                    <ul class="itemsHome">
+                        <li ng-repeat="s in stats">
+                         <i class="fas fa-{{s.icon}}"></i>  {{s.number}} {{s.label}}
+                        </li>
+                    </ul>
 
                     <h2 class="wow fadeIn">¿Podrás adivinar si tu barrio es de película ? </h2>
 
 
-                	  <h5 class="btn btn-50  wow fadeIn"
-                	  	data-wow-delay="1s"
+                	  <h5 class="btn btn-50 wow fadeIn"
+                	  	data-wow-delay="0.2s"
                 	  	ng-click="startGame()">
                 	  Empezá
                 	</h5>

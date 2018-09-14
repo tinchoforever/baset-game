@@ -11,16 +11,16 @@
                        <h3>
                          tuvo <strong>{{currentTitle.values.length}} </strong>jornadas de filmación en la ciudad.
                        </h3>
-                       <p> <small>¿No sabés que es? <a ng-href='https://www.imdb.com/search/title?title="{{currentCheck.TITULO_PROYECTO}}"' target="_blank"> Ayudate acá... </a></small></p>
+                       <a ng-href='https://www.imdb.com/search/title?title="{{currentCheck.TITULO_PROYECTO}}"' target="_blank"> Ver más sobre esta producción </a>
                        <h4 class="wow fadeIn"> ¿Dónde está filmada esta escena?</h4>
                      <h4>
       <img src="https://maps.googleapis.com/maps/api/streetview?size=325x300&location={{currentCheck.lat}},{{currentCheck.lon}}&sensor=false&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY"></h4>
                     
                 <div class="row">
-                   <div class="col-md-12  wow fadeIn" data-wow-delay="0.2s" >
+                   <div class="col-md-12  wow fadeIn" data-wow-delay="0.1s" >
                     <div class="row">
                       <div class="col-xs-12 col-md-3" ng-repeat="a in possibleAnswersBarrio">
-                          <div class="btn wow fadeIn" data-wow-delay="1.{{$index*2}}s" ng-click="responder(a)">
+                          <div class="btn wow fadeIn" data-wow-delay="{{$index*3/10}}s" ng-click="responder(a)">
                             <div class="row">
                               <div class="col-xs-12">
                                 <p>{{a}}</p>

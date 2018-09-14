@@ -1,8 +1,9 @@
 
 html,body{
     color:black;
-   background: repeating-linear-gradient( 45deg, #ffffff, #ffffff 5px, #fff9dc 5px, #fff9dc 10px );
-   
+   /*background: repeating-linear-gradient( 45deg, #ffffff, #ffffff 5px, #fff9dc 5px, #fff9dc 10px );*/
+       font-family: 'Open Sans';
+
 }
 .head{
     font-size: 18px;
@@ -30,9 +31,10 @@ html,body{
 }
 
 h3{
-    font-family: 'OpenSans';
+    font-family: 'Open Sans';
     color: #4c4c4c;
     font-weight: 400;
+    margin-top: 3px;
     
 }
 
@@ -49,7 +51,9 @@ strong a{
 .wrapper {
     max-width: 1280px;
     margin: 0 auto;
-    /*height: 100vh;*/
+    height: 106vh;
+            background: repeating-linear-gradient( 45deg, #ffffff, #ffffff 5px, #fff9dc 5px, #fff9dc 10px );
+
 }
 
 
@@ -84,6 +88,13 @@ strong a{
     justify-content: center;
     text-align: center;
 }
+
+.first-row .firstSlide{
+background-color: #ffffffe0;
+    padding: 16px 13px;
+    border-radius: 5px;
+    background: repeating-linear-gradient( 45deg, #ffffff, #ffffff 5px, #fff9dc 5px, #fff9dc 10px );
+}
 .second-row{
     display: flex;
     padding-top: 2em;
@@ -92,8 +103,11 @@ strong a{
 
 .respuesta .row{
         text-align: center;
-}
+     }
 
+.respuesta span{
+        font-size: 26px;
+}
 .respuesta .correcto{
         color: #ffffff;
     background-color: #99c25f;
@@ -108,6 +122,11 @@ strong a{
     border-radius: 22px;
 }
 
+.respuesta h3{
+     font-size: 18px;
+    line-height: 23px;
+    margin-top: 17px;
+}
 
 .share-menu{
 
@@ -151,6 +170,7 @@ h4 img{height: 350px;  }
     padding-bottom: 0px;
     font-weight: 100;
 }
+
 h2 small, h6 small, h4 small, h5 small{
     font-size: 12px;  
     color:white;
@@ -164,7 +184,23 @@ ul li a {
    display:inline-block;
    text-overflow: ellipsis;
    white-space: nowrap;
+
 }
+
+ul { margin:0px;
+    padding: 0px; 
+    text-align: left;
+    margin-left: 40px;}
+li{
+    list-style-type: none;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+li i{
+    margin-right: 8px;
+}
+
 h4{
     font-size: 1.2em;
 }
@@ -513,7 +549,7 @@ h3 a.btn {
     width: 100%;
     height: 100vh;
     z-index: 0;
-    opacity: 0.35;
+    opacity: 1;
 }
 
 .background-poster.poster-1{ background-image: url('../images/filma1.jpg');}
