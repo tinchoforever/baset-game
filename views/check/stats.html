@@ -1,18 +1,31 @@
 <div class="container">
             <div class="row first-row">
-                <div class="col-xs-12" ><div class="head">
+                
+                <div class="col-xs-12 firstSlide" >
+                	<div class="head">
                 		<p> #historiascondatos </p>
                     	<h2> Buenos Aires, una ciudad que se filma. </h2>
                    	</div>
-                    <h3 ng-repeat="s in stats">
-                	 <i class="fas fa-{{s.icon}}"></i>	{{s.number}} {{s.label}}
-                	</h3>
-                	<div class="left">
-<h2> Se filmaron más de {{netoProducciones.length}} producciones </h2>
-<p> <a href="#/producciones"> Descubrí Cuáles fueron las mas filmadas?</a> </p>
+                   	<div class="content">
+                    <p>Acá tiene que ir un parrafo explicando datos abiertos, portal de datos, BASET, etc</p>
+                    </div>
+<div class="left">
 
-<h2> Se utilizaron mas de <strong>{{netoLocaciones.length}}</strong> locaciones. </h2>
-<p> <a href="#/locations"> Conocé son los lugares mas populares.</a> </p>
+<h3> Se filmaron mas de <strong>{{netoProducciones.length}}</strong> producciones. </h3>
+
+	<a href="#/producciones" class="btn btn-50 wow fadeIn"><img src="" height=150><br> Descubrí cuáles fueron las series mas filmadas por barrio</a>
+
+<h3> Se utilizaron mas de <strong>{{netoLocaciones.length}}</strong> locaciones. </h3>
+
+	<a href="#/locations" class="btn btn-50 wow fadeIn"><img src="" height=150><br> Descubrí los barrios que más se utilizaron</a>
 
 
+                
+
+</div>                   
+                    
+                </div>
+             </div>
+              
+                
 </div>
