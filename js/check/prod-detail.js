@@ -2,6 +2,9 @@
 
 angular.module('initApp')
   .controller('prodDetailController',function ($routeParams, $rootScope, $scope,$location) {
+  	if(!$rootScope.checks){
+      $location.path('/stats');
+    }
 
  	$scope.produccion = $routeParams.name;
 

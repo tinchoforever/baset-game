@@ -3,7 +3,12 @@
 angular.module('initApp')
   .controller('locationsController',function ($rootScope, $scope,$location) {
 
- 
+    if(!$rootScope.checks){
+      $location.path('/stats');
+    }
+    window.runUpdates = function(){
+      reloadGraph($rootScope.barrios);
+    }
   	$scope.changeOption = function(){
   		reloadGraph($scope.barrios, $scope.selectedBarrio.key);
   	}
@@ -20,5 +25,5 @@ angular.module('initApp')
   		});
   	};
   	window.highlightScope = $scope.highlightPoint;
-    reloadGraph($rootScope.barrios);
+    
 });
