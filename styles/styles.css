@@ -253,7 +253,8 @@ a.btn {
     width: 75%;
 }
 .btn img, img.icon{
-    width: 50px;
+        width: 130px;
+    margin-bottom: 12px;
 }
 .btn.high{
     font-size: 2.25em;
