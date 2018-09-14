@@ -86,6 +86,16 @@ d3.xml("images/main.svg").mimeType("image/svg+xml").get(function(error, xml) {
 window.reloadGraph = function(data,highlight){
     // mainDataset = prepareData(data);
     // loadDataset(data);
+    var max = d3.max(data,function(d){ return d.values.length});
+    var min = d3.min(data,function(d){ return d.values.length});
+    var color = d3.scale.linear().domain([min,max])
+      .range([d3.rgb("#dcf9ff"), d3.rgb('#19c3e3')]);
+    data.map(function(d){
+      var k = d.key.toLowerCase().replace(' ','_').replace(' ','_');
+      d3.select('svg path.st1#'+k).style('fill', function(d){
+        return color(d.values.length);
+      })
+    })
 
     if (highlight){
           highlight = highlight.replace(' ', '_');

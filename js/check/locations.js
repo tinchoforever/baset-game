@@ -5,7 +5,7 @@ angular.module('initApp')
 
  
   	$scope.changeOption = function(){
-  		reloadGraph($scope.selectedBarrio, $scope.selectedBarrio.key);
+  		reloadGraph($scope.barrios, $scope.selectedBarrio.key);
   	}
   	$scope.highlightPoint = function(c){
   		c = c.replace('_',' ').replace('_',' ');
@@ -20,4 +20,5 @@ angular.module('initApp')
   		});
   	};
   	window.highlightScope = $scope.highlightPoint;
+    reloadGraph($rootScope.barrios);
 });
