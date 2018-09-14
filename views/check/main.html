@@ -6,12 +6,20 @@
                 		<p> #historiascondatos </p>
                     	<h2> Buenos Aires, una ciudad que se filma. </h2>
                    	</div>
+                    <p> _ </p>
                     <h3>Jugá con los <strong> Datos Abiertos </strong> de la Ciudad.</h3>
-                    <ul class="itemsHome">
-                        <li ng-repeat="s in stats">
-                         <i class="fas fa-{{s.icon}}"></i>  {{s.number}} {{s.label}}
-                        </li>
-                    </ul>
+                    
+                        <flex-slider flex-slide="s in stats track by $index"
+         animation="slide" direction-nav="false" control-nav="false" slideshow="true" slideshow-speed="2000">
+                    <li>
+                    <h1 class="center">
+                        <i class="fas fa-{{s.icon}}"></i> 
+                    </h1>
+                        <h1 class="center">
+                          {{s.number}} {{s.label}}
+                        </h1>
+                    </li>
+                   </flex-slider>
 
                     <h2 class="wow fadeIn">¿Podrás adivinar si tu barrio es de película ? </h2>
 
