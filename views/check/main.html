@@ -1,33 +1,34 @@
 <div class="container">
             <div class="row first-row">
-                
-                <div class="col-xs-12 firstSlide" >
+                <div class="col-xs-0 col-md-0" >
+                    <p></p>
+                </div>
+                <div class="col-xs-12 col-md-6 firstSlide" >
                 	<div class="head">
-                		<p> #historiascondatos </p>
-                    	<h2> Buenos Aires, una ciudad que se filma. </h2>
+                		<p> #HistoriasConDatos </p>
+                    	<h1>Una ciudad de Película </h1>
                    	</div>
-                    <p> _ </p>
-                    <h3>Jugá con los <strong> Datos Abiertos </strong> de la Ciudad.</h3>
+        
                     
                         <flex-slider flex-slide="s in stats track by $index"
          animation="slide" direction-nav="false" control-nav="false" slideshow="true" slideshow-speed="2000">
                     <li>
-                    <h1 class="center">
+                    <h1 class="center big">
                         <i class="fas fa-{{s.icon}}"></i> 
                     </h1>
-                        <h1 class="center">
+                        <h1 class="center os">
                           {{s.number}} {{s.label}}
                         </h1>
                     </li>
                    </flex-slider>
+                    <h3>Jugá con los <strong> Datos Abiertos </strong> de la Ciudad.</h3>
+                   
+                 
 
-                    <h2 class="wow fadeIn">¿Podrás adivinar si tu barrio es de película ? </h2>
-
-
-                	  <h5 class="btn btn-50 wow fadeIn"
+                	  <h5 class="btn wow fadeIn"
                 	  	data-wow-delay="0.2s"
                 	  	ng-click="startGame()">
-                	  Empezá
+                	  Empezar
                 	</h5>
                    
                     

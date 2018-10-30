@@ -38,26 +38,7 @@
         <div class="row firstSlide">
         
         
-      <div class="col-xs-12 respuesta firstSlide">
-                 <hr/>
-              <h1 class="center no-click"> Resumen de tu Juego </h1>
-   
-            <div ng-repeat="q in currentGame.questions">
-              <h2> <strong> <a ng-href='https://www.imdb.com/search/title?title="{{q.TITULO_PROYECTO}}"' target="_blank"> {{q.TITULO_PROYECTO}} ({{currentCheck['PERIODO']}}) </a></strong></h2>
-              <h3> tiene una escena filmada el {{q.FECHA_RODAJE}} en </h3>
-              <h2>  {{q.BARRIO}}, {{q.COMUNA}} </h2>
-              <p>{{q.DIRECCION}}</p>
-              <h2> <span ng-show="q.result" class="correcto">&#9786; Correcto! &#9786;</span>
-              <span ng-hide="q.result" class="incorrecto">&#9785; Incorrecto  &#9785;</span></h4>
-              <h4> Respondiente <strong> {{q.tuRespuesta  | uppercase}} </strong></small></h4>
-              <div class="row">
-                <div class="col-xs-6"> <img src="
-                  http://servicios.usig.buenosaires.gob.ar/LocDir/mapa.phtml?y={{q.lat.replace(',','.')}}&x={{q.lon.replace(',','.')}}&w=300&r=200&punto=1"></div>
-                <div class="col-xs-6"> <img src="https://maps.googleapis.com/maps/api/streetview?size=300x300&location={{q.lat}},{{q.lon}}&sensor=false&key=AIzaSyD9stAsiS_0E_LM69f6brmEYAQRxugQUDY"></div>
-              </div>
-               <hr/>
-        </div>
-    </div>
+      
 </div>
 
 
