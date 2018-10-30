@@ -124,10 +124,7 @@ background-color: #ffffffe0;
 }
 .container .firstSlide{
     z-index: 200000;
-    padding-left: 0;
-    padding-right: 0;
-    margin: 0;
-    padding-bottom: 0;
+  
 }
 .respuesta .row{
         text-align: center;
@@ -188,7 +185,7 @@ a.btn.no-click:hover{
 strong.btn.no-click:hover{
     color:white;
 }
-h4 img{height: 350px;  }
+h4 img{height: 275px;  }
 .btn p{
     margin: 0;
     vertical-align: middle;
@@ -254,11 +251,11 @@ h5 {
 
 a{
     text-decoration: underline;
-    color: #19c3e3;
+    color: #FFD200;
 }
 a:visited{
     text-decoration: underline;
-    color: #19c3e3;
+    color: #FFD200;
 }
 a.btn:visited {
     color:white;

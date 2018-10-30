@@ -6,8 +6,8 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <span ng-show="lastAnswer.result" class="correcto">&#9786; Correcto! &#9786;</span>
-              <span ng-hide="lastAnswer.result" class="incorrecto">&#9785; Incorrecto  &#9785;</span> 
+                <h1><span ng-show="lastAnswer.result">Correcto!</span>
+              <span ng-hide="lastAnswer.result"> Incorrecto</span> </h1>
 
               <h3>
                  En {{currentCheck.DIRECCION}}, <strong>{{currentCheck.BARRIO}} </strong> ({{currentCheck.COMUNA}}) se filmó una escena de <strong>{{currentCheck['TITULO_PROYECTO']}} </strong> el {{currentCheck.FECHA_RODAJE}}</h3>
@@ -30,8 +30,8 @@
                     <h4 ng-hide="gameFinish">
                     Quedan {{currentGame.remaing}} de {{currentGame.questions.length}} </strong> </h4>
                     <h4 ng-show="gameFinish"> Conocé tus resultados.</h4>
-                    <h5> <a class="btn btn-50" ng-hide="gameFinish" href="" ng-click="nextQuestionBarrio()"> Continuar! </a></h5>
-                      <h5> <a class="btn btn-50" ng-show="gameFinish" href="" ng-click="finishGame()"> Terminar</a></h5>
+                    <h5> <a class="btn" ng-hide="gameFinish" href="" ng-click="nextQuestionBarrio()"> Continuar! </a></h5>
+                      <h5> <a class="btn " ng-show="gameFinish" href="" ng-click="finishGame()"> Terminar</a></h5>
             </div>
             <div class="col-md-2"></div>
             
