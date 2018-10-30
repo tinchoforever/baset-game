@@ -594,3 +594,10 @@ h3 a.btn {
 .background-poster .wrapper{
     background-color:#fff9dcb5;
 }
+
+select{
+    color:black;
+}
+.h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small{
+    color:white;
+}
