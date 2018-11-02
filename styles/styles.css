@@ -171,7 +171,7 @@ a.btn.no-click:hover{
 strong.btn.no-click:hover{
     color:white;
 }
-h4 img{height: 275px;  }
+h4 img{height: 225px;  }
 .btn p{
     margin: 0;
     vertical-align: middle;
@@ -574,7 +574,9 @@ h3 a.btn {
     z-index: 0;
     opacity: 1;
 }
-
+h2, h3, h4{
+    font-family: 'Open Sans';
+}
 .background-poster.poster-1{ background-image: url('../images/filma1.jpg');}
 .background-poster.poster-2{ background-image: url('../images/filma2.jpg');}
 .background-poster.poster-3{ background-image: url('../images/filma3.jpg');}
