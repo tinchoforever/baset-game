@@ -1,12 +1,12 @@
 <div class="container respuesta first-row">
            
-        <div class=" row second-row answer firstSlide">
+        <div class=" row second-row answer firstSlide respuesta-{{lastAnswer.result}}">
               <div class="col-xs-12">
         
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <h1> <span ng-show="lastAnswer.result">Correcto!</span>
+                <h1 class="big"> <span ng-show="lastAnswer.result">Correcto!</span>
               <span ng-hide="lastAnswer.result">Incorrecto </span>  </h1>
            
               <h3>
@@ -26,8 +26,8 @@
         </div>
        <div class="row">
 
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
+            
+            <div class="col-md-12">
                     <h2> <strong> Tu puntaje es {{currentGame.points}}  </strong></h2>
                     <h4  ng-hide="gameFinish">
                     Quedan {{currentGame.remaing}} de {{currentGame.questions.length}} </strong> </h4>
@@ -35,7 +35,7 @@
                     <h5> <a class="btn" ng-hide="gameFinish" href="" ng-click="nextQuestion()"> Continuar! </a></h5>
                       <h5> <a class="btn" ng-show="gameFinish" href="" ng-click="finishGame()">Terminar!</a></h5>
             </div>
-            <div class="col-md-2"></div>
+           
             
         </div>
           

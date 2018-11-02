@@ -29,7 +29,7 @@ html,body{
 }
 
 
-.head h1{
+.head h1, h1.big{
     font-size: 42px;
 }
 h1.big{
@@ -124,6 +124,7 @@ background-color: #ffffffe0;
 }
 .container .firstSlide{
     z-index: 200000;
+    padding:0;
   
 }
 .respuesta .row{
@@ -131,22 +132,7 @@ background-color: #ffffffe0;
         z-index: 20000;
      }
 
-.respuesta span{
-        font-size: 26px;
-}
-.respuesta .correcto{
-        color: #ffffff;
-    background-color: #99c25f;
-    padding: 4px 16px;
-    border-radius: 22px;
-}
 
-.respuesta .incorrecto{
-       color: #ffffff;
-    background-color: #e76056;
-    padding: 4px 16px;
-    border-radius: 22px;
-}
 
 .respuesta h3{
      font-size: 18px;
@@ -266,7 +252,12 @@ h5 a.btn{
 a.btn {
     text-decoration: none;
 }
-
+.col-xs-12.col-md-6.firstSlide{
+    padding: 16px 13px;
+}
+.col-md-12{
+    padding: 1px 10px;
+}
 .btn{
     font-size: 24px;
     border-color: transparent;
@@ -274,8 +265,8 @@ a.btn {
     text-transform: uppercase;
     font-weight: 700;
     background-color: #FFD200;
-    color:black;
-    margin: 2px 4px;
+    color:black !important;
+    margin:2px ;
     width: 100%;
 }
 .btn-50{
@@ -600,4 +591,11 @@ select{
 }
 .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small{
     color:white;
+}
+
+.firstSlide.respuesta-true{
+ background: #096900b3;
+}
+.firstSlide.respuesta-false{
+    background: #b72d2d69;
 }
