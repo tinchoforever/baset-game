@@ -258,6 +258,10 @@ a.btn {
 .col-md-12{
     padding: 1px 10px;
 }
+.col-xs-12.col-md-6.firstSlide.main{
+    padding:0px;
+
+}
 .btn{
     font-size: 24px;
     border-color: transparent;

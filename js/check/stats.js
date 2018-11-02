@@ -72,7 +72,7 @@ angular.module('initApp')
 		        	return b.values.length - a.values.length ;
 		        };
         var orderAlphabetNest = function(a,b){
-              return b.key - a.key ;
+              return a.key - b.key;
             };
         $rootScope.comunas = d3.nest()
 		        .key(function(d) {
@@ -99,7 +99,7 @@ angular.module('initApp')
             .sort(orderUpperNest);
     });
 
-
+    console.log($rootScope.barrios);
 		$rootScope.produccionesFilter = d3.nest()
 		        .key(function(d) {
 		          

@@ -1,20 +1,22 @@
-<div class="container">
-            <div class="row firstSlide">
-                <div class="col-md-12" ><div class="head">
-                		<p> #historiascondatos </p>
-                    	<h2> Buenos Aires, una ciudad que se filma. </h2>
+<div class="container ">
+            <div class="row firstSlide main">
+                <div class="col-md-12 " ><div class="head">
+                	   <p> #HistoriasConDatos </p>
+                        <h1>Una ciudad de Película </h1>
                    	</div>
 			
-      <h1> <strong>{{temas.key}} </strong> se filmó  {{temas.values.length}} jornadas en la ciudad. </h1>
-			<h3> Tuvo {{temas.values.lenght}} lugares diferentes como <strong> Palermo, Monserrat y Puerto Madero </strong>
-			</h3>
+      <h1 class="big"> <strong>{{temas.key}} </strong> </h1> <p> se filmó  {{temas.values.length}} jornadas en la ciudad.Tuvo {{temas.values.lenght}} lugares diferentes como <strong> Palermo, Monserrat y Puerto Madero </strong>
+			</h4>
 			<p> A continuacion te mostramos las locaciones que utilizaron </p>
 			<div class="row">
         <flex-slider flex-slide="q in temas.values track by $index"
          animation="slide" control-nav="false" slideshow="true" slideshow-speed="3000">
   <li>
-    <h2> <strong>El {{q.FECHA_RODAJE}} en filmó en</strong>
-              {{q.DIRECCION}}, {{q.BARRIO}}, {{q.COMUNA}} </h3>
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8 firstSlide main">
+    <h4> <strong>El {{q.FECHA_RODAJE}} en filmó en</strong>
+              {{q.DIRECCION}}, {{q.BARRIO}}, {{q.COMUNA}} </h4>
               <div class="row">
                 <div class="col-xs-6"> 
                 <img src="
@@ -25,6 +27,7 @@
                 </div>
               </div>
           </div>
+
   </li>
 </flex-slider>
 			
