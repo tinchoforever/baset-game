@@ -23,11 +23,7 @@
                
 
             </div>
-        </div>
-       <div class="row">
-
-            
-            <div class="col-md-12">
+              <div class="col-xs-12 full-width">
                     <h2> <strong> Tu puntaje es {{currentGame.points}}  </strong></h2>
                     <h4  ng-hide="gameFinish">
                     Quedan {{currentGame.remaing}} de {{currentGame.questions.length}} </strong> </h4>
@@ -35,9 +31,8 @@
                     <h5> <a class="btn" ng-hide="gameFinish" href="" ng-click="nextQuestion()"> Continuar! </a></h5>
                       <h5> <a class="btn" ng-show="gameFinish" href="" ng-click="finishGame()">Terminar!</a></h5>
             </div>
-           
-            
         </div>
+  
           
     </div>
     </div>          

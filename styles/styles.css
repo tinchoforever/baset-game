@@ -1,7 +1,9 @@
 
 html,body{
     color:black;
-       font-family: 'Open Sans';
+    font-family: 'Open Sans';
+    overflow: hidden;
+    
 
 }
 .head{
@@ -69,8 +71,8 @@ strong a{
 
 
 .container {
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -80,7 +82,7 @@ strong a{
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
 }
 
 .first-row{
@@ -129,6 +131,7 @@ background-color: #ffffffe0;
 .respuesta .row{
         text-align: center;
         z-index: 20000;
+        overflow: hidden;
      }
 
 
@@ -144,12 +147,11 @@ background-color: #ffffffe0;
     text-align: center;
 }
 .btn.share {
-    border-radius: 20px;
-    width: 36px;
+    border-radius: 40px;
+    width: 45px;
     text-align: center;
     margin: 0;
-    padding: 5px;
-    padding-top:6px;
+
 }
 .has-margin-top {
     margin-top: 3em;
@@ -211,9 +213,13 @@ li{
 li i{
     margin-right: 8px;
 }
+.col-xs-12{
+    margin-bottom: 2px;
 
+}
 h4{
     font-size: 1.2em;
+    padding: 15px 15px;
 }
 
 h4 img{
@@ -257,10 +263,12 @@ a.btn {
 .col-md-12{
     padding: 1px 10px;
 }
-.col-xs-12.col-md-6.firstSlide.main{
+.col-xs-12.col-md-6.firstSlide.main, .col-xs-12.full-width{
     padding:0px;
+    border-radius: 0;
 
 }
+
 .btn{
     font-size: 24px;
     border-color: transparent;
@@ -269,8 +277,14 @@ a.btn {
     font-weight: 700;
     background-color: #FFD200;
     color:black !important;
-    margin:2px ;
     width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    border-radius: 0;
+    border: 0;
+    
 }
 .btn-50{
     width: 75%;
@@ -588,7 +602,7 @@ h2, h3, h4{
 .background-poster.poster-6{ background-image: url('../images/filma6.jpg');}
 
 .background-poster .wrapper{
-    background-color:#fff9dcb5;
+    background-color:black;
 }
 
 select{
