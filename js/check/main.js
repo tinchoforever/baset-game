@@ -248,7 +248,7 @@ angular.module('initApp')
           label: 'Años'
         });
         $rootScope.stats.push({
-          number: $rootScope.netofechas.length,
+          number: $rootScope.netofechas.length, 
           icon: 'video',
           label: 'Dias de Filmación'
         });
