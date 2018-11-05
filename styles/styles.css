@@ -131,7 +131,7 @@ background-color: #ffffffe0;
 .respuesta .row{
         text-align: center;
         z-index: 20000;
-        
+        overflow: hidden;
      }
 
 
