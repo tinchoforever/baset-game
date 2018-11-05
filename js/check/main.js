@@ -50,8 +50,21 @@ angular.module('initApp')
         && d.TITULO_PROYECTO.toLowerCase() != $rootScope.currentCheck.TITULO_PROYECTO.toLowerCase();
       }).map(function(d){ return d.TITULO_PROYECTO; });
 
-      var randomAnswersTitulo = getRandom(filteredAnswersTitulo,3);
-      randomAnswersTitulo.push($rootScope.currentCheck.TITULO_PROYECTO.toLowerCase());
+      var randomAnswersTitulo = getRandom(filteredAnswersTitulo,4);
+      var isOnRandom = false;
+      for (var i = 0; i < randomAnswersTitulo.length; i++) {
+        if(randomAnswersTitulo[i] == $rootScope.currentCheck.TITULO_PROYECTO.toLowerCase())
+        {
+          isOnRandom = true;
+          break;
+        }
+      }
+      //Debo ponerlo.
+      if(!isOnRandom){
+        var randomReplace = Math.floor(Math.random() * 4);
+        randomAnswersTitulo[randomReplace] = $rootScope.currentCheck.TITULO_PROYECTO.toLowerCase();
+      }
+      
             
       $rootScope.currentBarrio = $rootScope.barriosFiltered.filter(function(d){
         if (d.key.toLowerCase() === $rootScope.currentCheck.BARRIO.toLowerCase()){
@@ -248,7 +261,7 @@ angular.module('initApp')
           label: 'Años'
         });
         $rootScope.stats.push({
-          number: $rootScope.netofechas.length, 
+          number: $rootScope.netofechas.length,   
           icon: 'video',
           label: 'Dias de Filmación'
         });
