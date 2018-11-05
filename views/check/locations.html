@@ -6,9 +6,9 @@
                    	</div>
                </div>
             <div class="col-xs-12 col-md-6" >
-			<h2> Se utilizaron mas de <strong>{{netoLocaciones.length}}</strong> locaciones. </h2>
-			<p> <a href=""> ¿Cuales son los lugares mas populares?</a> </p>
-				<p> Selecciona el barrio donde estas. 
+			<h2> Se utilizaron más de <strong>{{netoLocaciones.length}}</strong> locaciones. </h2>
+			<p> <a href=""> ¿Cuáles son los lugares más populares?</a> </p>
+				<p> Seleccioná el barrio donde estás: 
 					<select ng-options="s as s.key for s in barrios" ng-model="selectedBarrio" ng-change="changeOption()"></select></p>
 			
 			<caba-chart container="'caba'" data='barrios' highlight='selectedBarrio'></caba-chart>
