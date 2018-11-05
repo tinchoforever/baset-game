@@ -2,8 +2,8 @@
 html,body{
     color:black;
     font-family: 'Open Sans';
-    overflow: hidden;
     
+    background-color:     black;
 
 }
 .head{
@@ -131,7 +131,7 @@ background-color: #ffffffe0;
 .respuesta .row{
         text-align: center;
         z-index: 20000;
-        overflow: hidden;
+        
      }
 
 
@@ -214,7 +214,11 @@ li i{
     margin-right: 8px;
 }
 .col-xs-12{
-    
+    padding: 2px 10px;
+
+}
+.col-md-12{
+    padding: 2px 10px;
 
 }
 h4{
@@ -259,9 +263,6 @@ a.btn {
 }
 .col-xs-12.col-md-6.firstSlide{
     padding: 16px 13px;
-}
-.col-md-12{
-    padding: 1px 10px;
 }
 .col-xs-12.col-md-6.firstSlide.main, .col-xs-12.full-width{
     padding:0px;

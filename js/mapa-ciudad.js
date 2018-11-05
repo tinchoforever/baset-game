@@ -53,7 +53,7 @@ d3.xml("images/main.svg").mimeType("image/svg+xml").get(function(error, xml) {
         if (error) throw error;
         d3.select("#" + renderId).node().appendChild(xml.documentElement);
         d3.select("#" + renderId + " svg")
-          .attr('width','100%')
+          .attr('width','80%')
           // .attr('height', '40vh');
 
         if (highlight){
