@@ -250,12 +250,12 @@ angular.module('initApp')
         $rootScope.stats.push({
           number: $rootScope.netofechas.length,
           icon: 'video',
-          label: 'Dias de Filmacion'
+          label: 'Dias de Filmación'
         });
         $rootScope.stats.push({
           number: $rootScope.netoVideoClips.length,
           icon: 'music',
-          label: 'Video Clips'
+          label: 'Videoclips'
         });
         $rootScope.stats.push({
           number: $rootScope.netoLocaciones.length,
