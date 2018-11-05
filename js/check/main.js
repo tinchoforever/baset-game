@@ -49,6 +49,7 @@ angular.module('initApp')
         return d.BARRIO.toLowerCase() != $rootScope.currentCheck.BARRIO.toLowerCase()
         && d.TITULO_PROYECTO.toLowerCase() != $rootScope.currentCheck.TITULO_PROYECTO.toLowerCase();
       }).map(function(d){ return d.TITULO_PROYECTO; });
+      filteredAnswersTitulo = filteredAnswersTitulo.filter(function(v,i) { return filteredAnswersTitulo.indexOf(v) == i; });
 
       var randomAnswersTitulo = getRandom(filteredAnswersTitulo,4);
       var isOnRandom = false;
