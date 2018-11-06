@@ -134,8 +134,18 @@ background-color: #ffffffe0;
         overflow: hidden;
      }
 
+.respuesta .row.end{
+        
+        overflow: auto;
+     }
 
-
+.end .col-xs-12{
+    padding: 0;
+}
+.end a.btn.cta{
+    width: 91%;
+    padding: 8px;
+}
 .respuesta h3{
      font-size: 18px;
     line-height: 23px;
