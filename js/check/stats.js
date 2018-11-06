@@ -107,6 +107,13 @@ angular.module('initApp')
 		        })
 		        .entries($rootScope.readyToCheck)
 		        .sort(orderUpperNest);
+      $rootScope.allProd = d3.nest()
+            .key(function(d) {
+              
+              return toTitleCase(d.TITULO_PROYECTO);
+            })
+            .entries(data)
+            .sort(orderUpperNest);
         $rootScope.netofechas = d3.map(data, function(d){return d.FECHA_RODAJE;}).keys();
         $rootScope.netoPeriodo = d3.map(data, function(d){return d.PERIODO;}).keys();
         $rootScope.netoProducciones = d3.map(data, function(d){return d.TITULO_PROYECTO.toLowerCase();}).keys();

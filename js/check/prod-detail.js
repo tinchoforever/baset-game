@@ -9,7 +9,7 @@ angular.module('initApp')
  	$scope.produccion = $routeParams.name;
 
  	var filtered = [];
-      $rootScope.produccionesFilter.map(function(p){
+      $rootScope.allProd.map(function(p){
       		if (p.key.toLowerCase() == $scope.produccion.toLowerCase()){
 	          $scope.temas = p;
 	      }

@@ -105,6 +105,13 @@ angular.module('initApp')
     });
 
     console.log($rootScope.barrios);
+    $rootScope.allProd = d3.nest()
+            .key(function(d) {
+              
+              return toTitleCase(d.TITULO_PROYECTO);
+            })
+            .entries(data)
+            .sort(orderUpperNest);
 		$rootScope.produccionesFilter = d3.nest()
 		        .key(function(d) {
 		          
